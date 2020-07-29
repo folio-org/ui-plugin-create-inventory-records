@@ -1,5 +1,4 @@
 export default function config() {
-  // okapi endpoints
   this.get('/_/version', () => '0.0.0');
 
   this.get('_/proxy/tenants/:id/modules', []);
@@ -11,6 +10,7 @@ export default function config() {
   this.get('/configurations/entries', {
     configs: []
   });
+
   this.post('/bl-users/login', () => {
     return new Response(201, {
       'X-Okapi-Token': `myOkapiToken:${Date.now()}`
@@ -28,5 +28,16 @@ export default function config() {
         permissions: []
       }
     });
+  });
+
+  this.get('/contributor-name-types');
+  this.get('/instance-types');
+  this.get('/identifier-types');
+
+  this.post('/inventory/instances', ({ instances }, request) => {
+    const body = JSON.parse(request.requestBody);
+    const instance = instances.create(body);
+
+    return instance.attrs;
   });
 }

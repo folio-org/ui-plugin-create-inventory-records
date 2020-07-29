@@ -1,1 +1,1 @@
-export { default } from './CreateRecordsWrapper';
+export { default } from './CreateRecordsPlugin';

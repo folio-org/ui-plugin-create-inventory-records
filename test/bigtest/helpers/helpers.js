@@ -8,7 +8,7 @@ import mirageOptions from '../network';
 import PluginHarness from './PluginHarness';
 
 export default function setupApplication({
-  scenarios,
+  scenarios = ['default'],
   hasAllPerms = true,
 } = {}) {
   setupStripesCore({
