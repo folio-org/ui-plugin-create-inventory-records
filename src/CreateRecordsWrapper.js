@@ -12,7 +12,10 @@ import {
   useIsLoading,
 } from './hooks';
 
-const CreateRecordsWrapper = ({ onCreate, mutator }) => {
+const CreateRecordsWrapper = ({
+  onCreate,
+  mutator: { createInstance },
+}) => {
   const { identifierTypesByName } = useData();
   const callout = useCallout();
   const isLoading = useIsLoading();
@@ -21,7 +24,7 @@ const CreateRecordsWrapper = ({ onCreate, mutator }) => {
     const { instance } = formData;
 
     try {
-      await mutator.instance.POST(parseInstance(instance, identifierTypesByName));
+      await createInstance.POST(parseInstance(instance, identifierTypesByName));
 
       callout.sendCallout({
         message: <FormattedMessage id="ui-plugin-create-inventory-records.onSave.success" />,
@@ -34,7 +37,7 @@ const CreateRecordsWrapper = ({ onCreate, mutator }) => {
         type: 'error',
       });
     }
-  }, [onCreate, callout, mutator, identifierTypesByName]);
+  }, [onCreate, callout, createInstance, identifierTypesByName]);
 
   if (isLoading) return null;
 
@@ -59,7 +62,7 @@ CreateRecordsWrapper.propTypes = {
 };
 
 CreateRecordsWrapper.manifest = Object.freeze({
-  instance: {
+  createInstance: {
     type: 'okapi',
     records: 'instances',
     throwErrors: false,
