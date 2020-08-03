@@ -54,8 +54,6 @@ export const validateInstance = (instance = {}) => {
     errors.instanceTypeId = <FormattedMessage id="ui-plugin-create-inventory-records.selectToContinue" />;
   }
 
-  // the list itself is not required, but if a list is present,
-  // each item must have non-empty values in each field.
   const contributors = {
     listName: 'contributors',
     textFields: ['name'],
