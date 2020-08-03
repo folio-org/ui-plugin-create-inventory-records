@@ -6,7 +6,6 @@ import { stripesConnect } from '@folio/stripes/core';
 
 import { DataContext } from '../contexts';
 
-
 const DataProvider = ({
   children,
   resources,
