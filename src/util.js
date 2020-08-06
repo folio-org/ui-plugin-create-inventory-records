@@ -98,7 +98,18 @@ export const parseIdentifiers = (instance, identifierTypesByName) => {
 };
 
 export const parseInstance = (instance, identifierTypesByName) => {
-  instance.identifiers = parseIdentifiers(instance, identifierTypesByName);
+  const identifiers = parseIdentifiers(instance, identifierTypesByName);
+
+  if (identifiers.length) {
+    instance.identifiers = identifiers;
+  }
+
+  if (!instance.contributors.length) {
+    delete instance.contributors;
+  }
+
+  instance.staffSuppress = false;
+  instance.source = 'FOLIO';
 
   return instance;
 };
