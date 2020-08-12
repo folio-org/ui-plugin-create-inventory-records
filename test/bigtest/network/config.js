@@ -94,6 +94,11 @@ export default function config() {
   this.get('/contributor-name-types');
   this.get('/instance-types');
   this.get('/identifier-types');
+  this.get('/item-note-types');
+  this.get('/material-types');
+  this.get('/loan-types');
+  this.get('/electronic-access-relationships');
+
   this.get('/call-number-types', {
     callNumberTypes: [],
     totalRecords: 0
@@ -111,5 +116,12 @@ export default function config() {
     const holding = holdings.create(body);
 
     return holding.attrs;
+  });
+
+  this.post('/inventory/items', ({ items }, request) => {
+    const body = JSON.parse(request.requestBody);
+    const item = items.create(body);
+
+    return item.attrs;
   });
 }

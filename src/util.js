@@ -1,3 +1,4 @@
+import isEmpty from 'lodash/isEmpty';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
@@ -15,7 +16,11 @@ import { FormattedMessage } from 'react-intl';
  * @return nested array of errors for optionalField
  */
 export const validateOptionalField = (optionalField, values) => {
-  const { textFields, selectFields, listName } = optionalField;
+  const {
+    textFields,
+    selectFields,
+    listName,
+  } = optionalField;
   const errorList = [];
 
   if (!values?.[listName]?.length) {
@@ -79,6 +84,45 @@ export const validateHolding = (holding = {}) => {
   return errors;
 };
 
+export const validateItem = (item = {}) => {
+  const errors = {};
+
+  if (!item?.materialType?.id) {
+    errors.materialType = {
+      id: <FormattedMessage id="ui-plugin-create-inventory-records.selectToContinue" />
+    };
+  }
+
+  if (!item?.permanentLoanType?.id) {
+    errors.permanentLoanType = {
+      id: <FormattedMessage id="ui-plugin-create-inventory-records.selectToContinue" />
+    };
+  }
+
+  const validationList = [
+    {
+      listName: 'circulationNotes',
+      textFields: ['note'],
+      selectFields: ['noteType'],
+    },
+    {
+      listName: 'electronicAccess',
+      textFields: ['uri'],
+      selectFields: ['relationshipId'],
+    }
+  ];
+
+  validationList.forEach(field => {
+    const error = validateOptionalField(field, item);
+
+    if (error.length) {
+      errors[field.listName] = error;
+    }
+  });
+
+  return errors;
+};
+
 export const parseIdentifiers = (instance, identifierTypesByName) => {
   const identifiers = [];
   const {
@@ -128,6 +172,19 @@ export const parseHolding = (holding, instance) => {
   holding.instanceId = instance.id;
 
   return holding;
+};
+
+export const parseItem = (item, holding) => {
+  item.holdingsRecordId = holding.id;
+  item.status = { name: 'Available' };
+
+  const electronicAccess = item.electronicAccess.filter(ea => !isEmpty(ea));
+
+  if (!electronicAccess.length) {
+    delete item.electronicAccess;
+  }
+
+  return item;
 };
 
 export default {};

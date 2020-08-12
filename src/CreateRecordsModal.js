@@ -19,6 +19,7 @@ const CreateRecordsModal = ({ onClose }) => (
     dismissible
     open
     label={<FormattedMessage id="ui-plugin-create-inventory-records.fastAddLabel" />}
+    enforceFocus={false}
     onClose={onClose}
     footer={
       <ModalFooter>

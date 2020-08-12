@@ -17,6 +17,10 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
   selectNameTypeField = selectable('[name="instance.contributors[0].contributorNameTypeId"]');
 }
 
+@interactor class CirculationNotesInteractor {
+  fillNoteField = fillable('[name="item.circulationNotes[0].note"]');
+}
+
 @interactor class LocationLookupInteractor {
   isLoaded = isPresent('#locationId[aria-disabled="false"]');
   clickOnLocationBtn = clickable('#locationId');
@@ -35,11 +39,14 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
 
 @interactor class FormInteractor {
   contributors = new ContributorsInteractor();
+  circulationNotes = new CirculationNotesInteractor();
   fillTitleField = fillable('#input_instance_title');
   issnField = fillable('#issn');
   isbnField = fillable('#isbn');
   selectInstanceType = selectable('#select_instance_type');
   openLocationLookup = clickable('[data-test-location-lookup-button]');
+  selectMaterialType = selectable('#material_type');
+  selectPermanentLoanType = selectable('#permanent_loan_type');
 }
 
 @interactor class ModalInteractor {

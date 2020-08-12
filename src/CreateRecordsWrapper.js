@@ -8,12 +8,14 @@ import CreateRecordsForm from './CreateRecordsForm';
 import {
   parseInstance,
   parseHolding,
+  parseItem,
 } from './util';
 import {
   useData,
   useCallout,
   useIsLoading,
 } from './hooks';
+import { circulationNoteTypes } from './consts';
 
 const initialValues = {
   instance: {
@@ -21,6 +23,12 @@ const initialValues = {
     contributors: [],
   },
   holding: {},
+  item: {
+    electronicAccess: [],
+    circulationNotes: [{
+      noteType: circulationNoteTypes[0].value,
+    }],
+  },
 };
 
 const CreateRecordsWrapper = ({
@@ -28,6 +36,7 @@ const CreateRecordsWrapper = ({
   mutator: {
     createInstanceRecord,
     createHoldingsRecord,
+    createItemRecord,
   },
 }) => {
   const { identifierTypesByName } = useData();
@@ -35,11 +44,16 @@ const CreateRecordsWrapper = ({
   const isLoading = useIsLoading();
 
   const handleSubmit = useCallback(async (formData) => {
-    const { instance, holding } = formData;
+    const {
+      instance,
+      holding,
+      item,
+    } = formData;
 
     try {
       const instanceRecord = await createInstanceRecord.POST(parseInstance(instance, identifierTypesByName));
-      await createHoldingsRecord.POST(parseHolding(holding, instanceRecord));
+      const holdingsRecord = await createHoldingsRecord.POST(parseHolding(holding, instanceRecord));
+      await createItemRecord.POST(parseItem(item, holdingsRecord));
 
       callout.sendCallout({
         message: <FormattedMessage id="ui-plugin-create-inventory-records.onSave.success" />,
@@ -57,6 +71,7 @@ const CreateRecordsWrapper = ({
     callout,
     createInstanceRecord,
     createHoldingsRecord,
+    createItemRecord,
     identifierTypesByName,
   ]);
 
@@ -85,6 +100,12 @@ CreateRecordsWrapper.manifest = Object.freeze({
   createHoldingsRecord: {
     type: 'okapi',
     path: 'holdings-storage/holdings',
+    throwErrors: false,
+    fetch: false,
+  },
+  createItemRecord: {
+    type: 'okapi',
+    path: 'inventory/items',
     throwErrors: false,
     fetch: false,
   },

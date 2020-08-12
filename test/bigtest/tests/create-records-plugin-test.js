@@ -38,6 +38,7 @@ describe('CreateInventoryRecords', () => {
         await plugin.modal.form.contributors.fillNameField('name');
         await plugin.modal.form.contributors.selectNameTypeField('Personal name');
         await plugin.modal.form.contributors.makeFirstContributorPrimary();
+
         // holdings record
         await plugin.modal.form.openLocationLookup();
         await plugin.locationLookup.whenLoaded();
@@ -45,6 +46,12 @@ describe('CreateInventoryRecords', () => {
         await plugin.locationLookup.chooseFirstLocation();
         await plugin.locationLookup.clickSaveBtn();
         await plugin.locationLookup.whenClosed();
+
+        // item
+        await plugin.modal.form.selectMaterialType('text');
+        await plugin.modal.form.selectPermanentLoanType('Can circulate');
+        await plugin.modal.form.circulationNotes.fillNoteField('check out');
+
         await plugin.modal.clickSaveButton();
       });
 

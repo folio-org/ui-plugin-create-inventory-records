@@ -14,29 +14,35 @@ import stripesFinalForm from '@folio/stripes/final-form';
 import {
   InstanceAccordion,
   HoldingAccordion,
+  ItemAccordion,
 } from './components';
 import {
   validateInstance,
   validateHolding,
+  validateItem,
 } from './util';
 
 const initialStatus = {
   instance: true,
   holding: true,
-  item: false,
+  item: true,
 };
 
 const validate = (values) => {
   const instance = validateInstance(values.instance);
   const holding = validateHolding(values.holding);
+  const item = validateItem(values.item);
 
-  if (isEmpty(instance) && isEmpty(holding)) {
+  if (isEmpty(instance) &&
+    isEmpty(holding) &&
+    isEmpty(item)) {
     return {};
   }
 
   return {
     instance,
     holding,
+    item,
   };
 };
 
@@ -55,6 +61,7 @@ const CreateRecordsForm = ({ handleSubmit, form }) => (
       <AccordionSet initialStatus={initialStatus}>
         <InstanceAccordion />
         <HoldingAccordion change={form.change} />
+        <ItemAccordion />
       </AccordionSet>
     </AccordionStatus>
   </form>
