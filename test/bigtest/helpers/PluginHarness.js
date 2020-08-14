@@ -6,6 +6,8 @@ const PluginHarness = (props) => (
     aria-haspopup="true"
     type="create-inventory-records"
     id="clickable-add-inventory-records"
+    onOpen={() => {}}
+    onClose={() => {}}
     {...props}
   >
     <span data-test-no-plugin-available>No plugin available!</span>
