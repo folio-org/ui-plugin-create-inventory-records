@@ -98,6 +98,7 @@ export default function config() {
   this.get('/material-types');
   this.get('/loan-types');
   this.get('/electronic-access-relationships');
+  this.get('/instance-statuses');
 
   this.get('/call-number-types', {
     callNumberTypes: [],

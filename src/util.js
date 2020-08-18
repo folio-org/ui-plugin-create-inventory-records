@@ -153,13 +153,22 @@ export const parseIdentifiers = (instance, identifierTypesByName) => {
 
 export const parseInstance = (instance, identifierTypesByName) => {
   const identifiers = parseIdentifiers(instance, identifierTypesByName);
+  const {
+    dateOfPublication,
+    contributors,
+  } = instance;
 
   if (identifiers.length) {
     instance.identifiers = identifiers;
   }
 
-  if (!instance.contributors.length) {
+  if (!contributors.length) {
     delete instance.contributors;
+  }
+
+  if (dateOfPublication) {
+    instance.publication = [{ dateOfPublication }];
+    delete instance.dateOfPublication;
   }
 
   instance.staffSuppress = false;

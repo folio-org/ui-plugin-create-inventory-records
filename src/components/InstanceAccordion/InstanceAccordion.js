@@ -20,8 +20,12 @@ import {
 } from '../../hooks';
 
 const InstanceAccordion = () => {
-  const { instanceTypes } = useData();
+  const {
+    instanceTypes,
+    instanceStatuses,
+  } = useData();
   const resourceTypeOptions = useOptions(instanceTypes, 'id', 'name');
+  const instanceStatusOptions = useOptions(instanceStatuses, 'id', 'name');
 
   return (
     <Accordion
@@ -39,16 +43,15 @@ const InstanceAccordion = () => {
           />
         </Col>
         <Col sm={4}>
-          <FormattedMessage id="ui-plugin-create-inventory-records.instanceStatusTerm.uncataloged">
+          <FormattedMessage id="ui-plugin-create-inventory-records.selectInstanceStatus">
             {placeholder => (
               <Field
                 label={<FormattedMessage id="ui-plugin-create-inventory-records.instanceStatusTerm" />}
-                name="instance.statusTerm"
+                name="instance.statusId"
                 id="select_instance_status_term"
-                disabled
                 component={Select}
                 placeholder={placeholder}
-                dataOptions={[]}
+                dataOptions={instanceStatusOptions}
               />
             )}
           </FormattedMessage>
@@ -68,10 +71,10 @@ const InstanceAccordion = () => {
         <Col sm={4}>
           <Field
             label={<FormattedMessage id="ui-plugin-create-inventory-records.publicationDate" />}
-            name="instance.publicationDate"
-            dateFormat="YYYY-MM-DD"
-            backendDateStandard="YYYY-MM-DD"
-            component={Datepicker}
+            name="instance.dateOfPublication"
+            id="input_publication_date"
+            fullWidth
+            component={TextField}
           />
         </Col>
       </Row>

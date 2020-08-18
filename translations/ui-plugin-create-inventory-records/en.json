@@ -12,6 +12,7 @@
   "isbn": "ISBN",
   "issn": "ISSN",
   "selectResourceType": "Select resource type",
+  "selectInstanceStatus": "Select instance status",
   "resourceType": "Resource type",
   "cancel": "Cancel",
   "saveAndClose": "Save and close",
