@@ -10,7 +10,6 @@ import {
   Checkbox,
   Select,
   TextField,
-  Datepicker,
 } from '@folio/stripes/components';
 
 import ContributorFields from '../ContributorFields';

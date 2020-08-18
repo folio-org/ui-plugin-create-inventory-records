@@ -33,10 +33,13 @@ describe('CreateInventoryRecords', () => {
         await plugin.modal.form.issnField('123');
         await plugin.modal.form.isbnField('456');
         await plugin.modal.form.fillTitleField('title');
+        await plugin.modal.form.publicationDateField('2020');
+        await plugin.modal.form.selectInstanceStatus('Cataloged');
         await plugin.modal.form.selectInstanceType('computer dataset');
         await plugin.modal.form.contributors.clickAddNewContributor();
         await plugin.modal.form.contributors.fillNameField('name');
         await plugin.modal.form.contributors.selectNameTypeField('Personal name');
+
         await plugin.modal.form.contributors.makeFirstContributorPrimary();
 
         // holdings record
