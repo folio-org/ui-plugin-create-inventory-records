@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
 import { stripesConnect } from '@folio/stripes/core';
+import {
+  Layer,
+  Paneset,
+} from '@folio/stripes/components';
 
 import CreateRecordsForm from './CreateRecordsForm';
 import {
@@ -32,7 +36,7 @@ const initialValues = {
 };
 
 const CreateRecordsWrapper = ({
-  onCreate,
+  onClose,
   mutator: {
     createInstanceRecord,
     createHoldingsRecord,
@@ -59,7 +63,7 @@ const CreateRecordsWrapper = ({
         message: <FormattedMessage id="ui-plugin-create-inventory-records.onSave.success" />,
       });
 
-      onCreate();
+      onClose();
     } catch (error) {
       callout.sendCallout({
         message: <FormattedMessage id="ui-plugin-create-inventory-records.onSave.error" />,
@@ -67,7 +71,7 @@ const CreateRecordsWrapper = ({
       });
     }
   }, [
-    onCreate,
+    onClose,
     callout,
     createInstanceRecord,
     createHoldingsRecord,
@@ -78,15 +82,24 @@ const CreateRecordsWrapper = ({
   if (isLoading) return null;
 
   return (
-    <CreateRecordsForm
-      onSubmit={handleSubmit}
-      initialValues={initialValues}
-    />
+    <Paneset>
+      <Layer
+        isOpen
+        inRootSet
+        contentLabel={<FormattedMessage id="ui-plugin-create-inventory-records.fastAddLabel" />}
+      >
+        <CreateRecordsForm
+          onSubmit={handleSubmit}
+          onClose={onClose}
+          initialValues={initialValues}
+        />
+      </Layer>
+    </Paneset>
   );
 };
 
 CreateRecordsWrapper.propTypes = {
-  onCreate: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
   mutator: PropTypes.object.isRequired,
 };
 

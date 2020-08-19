@@ -49,12 +49,8 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
   selectMaterialType = selectable('#material_type');
   selectPermanentLoanType = selectable('#permanent_loan_type');
   selectInstanceStatus = selectable('#select_instance_status_term');
-}
-
-@interactor class ModalInteractor {
-  form = new FormInteractor('[data-test-create-records-form]');
   clickSaveButton = clickable('#save-records');
-  clickCancel = clickable('#cancel');
+  clickCancel = clickable('#cancel')
 }
 
 @interactor class CreateRecordsWrapperInteractor {
@@ -63,7 +59,7 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
     isFocused: is(':focus'),
   });
 
-  modal = new ModalInteractor('[data-test-create-records-modal]');
+  form = new FormInteractor('[data-test-create-records-form]');
 
   callout = new CalloutInteractor();
   locationLookup = new LocationLookupInteractor();

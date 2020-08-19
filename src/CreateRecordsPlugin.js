@@ -8,7 +8,8 @@ import { FormattedMessage } from 'react-intl';
 
 import { Button } from '@folio/stripes/components';
 
-import CreateRecordsModal from './CreateRecordsModal';
+import DataProvider from './providers/DataProvider';
+import CreateRecordsWrapper from './CreateRecordsWrapper';
 
 const CreateRecordsPlugin = ({
   buttonStyle,
@@ -40,7 +41,7 @@ const CreateRecordsPlugin = ({
   return (
     <>
       {
-        buttonVisible &&
+        !isModalOpen && buttonVisible &&
         <Button
           data-test-add-inventory-records
           buttonStyle={buttonStyle}
@@ -50,7 +51,11 @@ const CreateRecordsPlugin = ({
           <FormattedMessage id="ui-plugin-create-inventory-records.fastAddLabel" />
         </Button>
       }
-      {isModalOpen && <CreateRecordsModal onClose={closeModal} />}
+      {isModalOpen &&
+        <DataProvider>
+          <CreateRecordsWrapper onClose={closeModal} />
+        </DataProvider>
+      }
     </>
   );
 };

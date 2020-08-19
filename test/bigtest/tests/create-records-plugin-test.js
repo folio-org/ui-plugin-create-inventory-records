@@ -22,28 +22,27 @@ describe('CreateInventoryRecords', () => {
       await plugin.button.click();
     });
 
-    it('opens a modal', () => {
-      expect(plugin.modal.isPresent).to.be.true;
-      expect(plugin.modal.form.isPresent).to.be.true;
+    it('opens a plugin', () => {
+      expect(plugin.form.isPresent).to.be.true;
     });
 
     describe('save instance', () => {
       beforeEach(async function () {
         // instance record
-        await plugin.modal.form.issnField('123');
-        await plugin.modal.form.isbnField('456');
-        await plugin.modal.form.fillTitleField('title');
-        await plugin.modal.form.publicationDateField('2020');
-        await plugin.modal.form.selectInstanceStatus('Cataloged');
-        await plugin.modal.form.selectInstanceType('computer dataset');
-        await plugin.modal.form.contributors.clickAddNewContributor();
-        await plugin.modal.form.contributors.fillNameField('name');
-        await plugin.modal.form.contributors.selectNameTypeField('Personal name');
+        await plugin.form.issnField('123');
+        await plugin.form.isbnField('456');
+        await plugin.form.fillTitleField('title');
+        await plugin.form.publicationDateField('2020');
+        await plugin.form.selectInstanceStatus('Cataloged');
+        await plugin.form.selectInstanceType('computer dataset');
+        await plugin.form.contributors.clickAddNewContributor();
+        await plugin.form.contributors.fillNameField('name');
+        await plugin.form.contributors.selectNameTypeField('Personal name');
 
-        await plugin.modal.form.contributors.makeFirstContributorPrimary();
+        await plugin.form.contributors.makeFirstContributorPrimary();
 
         // holdings record
-        await plugin.modal.form.openLocationLookup();
+        await plugin.form.openLocationLookup();
         await plugin.locationLookup.whenLoaded();
         await plugin.locationLookup.clickOnLocationBtn();
         await plugin.locationLookup.chooseFirstLocation();
@@ -51,26 +50,26 @@ describe('CreateInventoryRecords', () => {
         await plugin.locationLookup.whenClosed();
 
         // item
-        await plugin.modal.form.selectMaterialType('text');
-        await plugin.modal.form.selectPermanentLoanType('Can circulate');
-        await plugin.modal.form.circulationNotes.fillNoteField('check out');
+        await plugin.form.selectMaterialType('text');
+        await plugin.form.selectPermanentLoanType('Can circulate');
+        await plugin.form.circulationNotes.fillNoteField('check out');
 
-        await plugin.modal.clickSaveButton();
+        await plugin.form.clickSaveButton();
       });
 
       it('saves instance and closes modal', () => {
-        expect(plugin.modal.isPresent).to.be.false;
+        expect(plugin.form.isPresent).to.be.false;
         expect(plugin.callout.successCalloutIsPresent).to.be.true;
       });
     });
 
     describe('click cancel', () => {
       beforeEach(async () => {
-        await plugin.modal.clickCancel();
+        await plugin.form.clickCancel();
       });
 
-      it('closes modal', () => {
-        expect(plugin.modal.isPresent).to.be.false;
+      it('closes plugin', () => {
+        expect(plugin.form.isPresent).to.be.false;
       });
     });
   });
