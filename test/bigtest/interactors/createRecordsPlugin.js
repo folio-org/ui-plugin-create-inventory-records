@@ -22,18 +22,12 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
 }
 
 @interactor class LocationLookupInteractor {
-  isLoaded = isPresent('#locationId[aria-disabled="false"]');
-  clickOnLocationBtn = clickable('#locationId');
-  chooseFirstLocation = clickable('#option-locationId-1-53cf956f-c1df-410b-8bea-27f712cca7c0');
-  clickSaveBtn = clickable('[data-test-button-save]');
-  isClosed = isPresent('#location-form');
+  clickOnLocationBtn = clickable('#select_permanent_location');
+  chooseFirstLocation = clickable('#option-select_permanent_location-1-1');
+  locationSelectLoaded = isPresent('#sl-container-select_permanent_location');
 
-  whenClosed() {
-    return this.when(() => !this.isClosed);
-  }
-
-  whenLoaded() {
-    return this.when(() => this.isLoaded);
+  whenLocationSelectLoaded() {
+    return this.when(() => this.locationSelectLoaded);
   }
 }
 
@@ -55,7 +49,7 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
   selectPermanentLoanType = selectable('#permanent_loan_type');
   selectInstanceStatus = selectable('#select_instance_status_term');
   clickSaveButton = clickable('#save-records');
-  clickCancel = clickable('#cancel')
+  clickCancel = clickable('#cancel');
 }
 
 @interactor class CreateRecordsWrapperInteractor {
@@ -65,10 +59,20 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
   });
 
   form = new FormInteractor('[data-test-create-records-form]');
+  isLoaded = isPresent('[data-test-create-records-form]');
 
   callout = new CalloutInteractor();
   locationLookup = new LocationLookupInteractor();
   cancelModal = new CancelConfirmModalInteractor('#cancel-editing-confirmation');
+  cancelModalLoaded = isPresent('#cancel-editing-confirmation');
+
+  whenLoaded() {
+    return this.when(() => this.isLoaded);
+  }
+
+  whenCancelModalLoaded() {
+    return this.when(() => this.cancelModalLoaded);
+  }
 }
 
 export default CreateRecordsWrapperInteractor;

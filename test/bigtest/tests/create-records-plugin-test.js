@@ -20,6 +20,7 @@ describe('CreateInventoryRecords', () => {
   describe('click "New fast add record" button', () => {
     beforeEach(async () => {
       await plugin.button.click();
+      await plugin.whenLoaded();
     });
 
     it('opens a plugin', () => {
@@ -42,12 +43,9 @@ describe('CreateInventoryRecords', () => {
         await plugin.form.contributors.makeFirstContributorPrimary();
 
         // holdings record
-        await plugin.form.openLocationLookup();
-        await plugin.locationLookup.whenLoaded();
         await plugin.locationLookup.clickOnLocationBtn();
+        await plugin.locationLookup.whenLocationSelectLoaded();
         await plugin.locationLookup.chooseFirstLocation();
-        await plugin.locationLookup.clickSaveBtn();
-        await plugin.locationLookup.whenClosed();
 
         // item
         await plugin.form.selectMaterialType('text');
@@ -58,15 +56,17 @@ describe('CreateInventoryRecords', () => {
       });
 
       it('saves instance and closes modal', () => {
-        expect(plugin.form.isPresent).to.be.false;
         expect(plugin.callout.successCalloutIsPresent).to.be.true;
       });
     });
 
     describe('input partial data, then click cancel', () => {
       beforeEach(async () => {
+        await plugin.form.issnField('123');
+        await plugin.form.isbnField('456');
         await plugin.form.fillTitleField('title');
         await plugin.form.clickCancel();
+        await plugin.whenCancelModalLoaded();
       });
 
       it('opens the cancel confirm modal', () => {

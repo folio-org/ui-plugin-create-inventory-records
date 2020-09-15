@@ -62,7 +62,7 @@ export default function config() {
   this.get('/locations', {
     locations: [
       {
-        id: '53cf956f-c1df-410b-8bea-27f712cca7c0',
+        id: '1',
         name: 'Annex',
         code: 'Code1',
         isActive: true,
@@ -75,7 +75,7 @@ export default function config() {
         ],
       },
       {
-        id: 'fcd64ce1-6995-48f0-840e-89ffa2288371',
+        id: '2',
         name: 'Main Library',
         code: 'Code2',
         isActive: true,

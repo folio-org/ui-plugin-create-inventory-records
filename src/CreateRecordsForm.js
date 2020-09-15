@@ -1,6 +1,7 @@
 import isEmpty from 'lodash/isEmpty';
 import React, {
   useState,
+  useCallback,
 } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
@@ -60,22 +61,14 @@ const CreateRecordsForm = ({
   submitting,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const exitEdit = () => {
-    onClose();
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const confirmClose = () => {
+  const closeModal = useCallback(() => setIsModalOpen(false), []);
+  const confirmClose = useCallback(() => {
     if (!pristine) {
       setIsModalOpen(true);
     } else {
-      exitEdit();
+      onClose();
     }
-  };
+  }, [pristine, onClose]);
 
   return (
     <form
@@ -132,7 +125,7 @@ const CreateRecordsForm = ({
         message={<FormattedMessage id="stripes-form.unsavedChanges" />}
         heading={<FormattedMessage id="stripes-form.areYouSure" />}
         onConfirm={closeModal}
-        onCancel={exitEdit}
+        onCancel={onClose}
         confirmLabel={<FormattedMessage id="stripes-form.keepEditing" />}
         cancelLabel={<FormattedMessage id="stripes-form.closeWithoutSaving" />}
       />
@@ -147,7 +140,6 @@ CreateRecordsForm.propTypes = {
   pristine: PropTypes.bool.isRequired,
   submitting: PropTypes.bool.isRequired,
 };
-
 
 export default stripesFinalForm({
   validate,
