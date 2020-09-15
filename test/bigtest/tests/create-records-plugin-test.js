@@ -27,8 +27,29 @@ describe('CreateInventoryRecords', () => {
       expect(plugin.form.isPresent).to.be.true;
     });
 
+    describe('close plugin', () => {
+      beforeEach(async () => {
+        await plugin.form.clickCancel();
+      });
+
+      it('closes plugin', () => {
+        expect(plugin.form.isPresent).to.be.false;
+      });
+    });
+
+    describe('validate instance', () => {
+      beforeEach(async () => {
+        await plugin.form.isbnField('456');
+        await plugin.form.clickSaveButton();
+      });
+
+      it('keeps form open', () => {
+        expect(plugin.form.isPresent).to.be.true;
+      });
+    });
+
     describe('save instance', () => {
-      beforeEach(async function () {
+      beforeEach(async () => {
         // instance record
         await plugin.form.issnField('123');
         await plugin.form.isbnField('456');
@@ -51,6 +72,9 @@ describe('CreateInventoryRecords', () => {
         await plugin.form.selectMaterialType('text');
         await plugin.form.selectPermanentLoanType('Can circulate');
         await plugin.form.circulationNotes.fillNoteField('check out');
+        await plugin.form.clickAddElectronicAccess();
+        await plugin.form.electronicAccess.selectRelationship('Resource');
+        await plugin.form.electronicAccess.fillUriField('uri');
 
         await plugin.form.clickSaveButton();
       });

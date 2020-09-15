@@ -31,14 +31,12 @@ const DataProvider = ({
       }
     }
 
-    const { instanceStatuses, settings } = loadedData;
-
-    const value = settings[0]?.value || '';
+    const { instanceStatuses, configs } = loadedData;
+    const value = configs[0]?.value || '';
     let config;
 
     try {
       const { instanceStatusCode, defaultDiscoverySuppress } = JSON.parse(value);
-
       const discoverySuppress = JSON.parse(defaultDiscoverySuppress);
       const statusId = (instanceStatuses.find(status => status.code === instanceStatusCode) || {}).id || '';
 
@@ -83,7 +81,7 @@ DataProvider.manifest = Object.freeze({
     records: 'instanceStatuses',
     path: 'instance-statuses?limit=1000&query=cql.allRecords=1 sortby name',
   },
-  settings: {
+  configs: {
     type: 'okapi',
     records: 'configs',
     path: 'configurations/entries?query=(module==FAST_ADD and configName==fastAddSettings)',

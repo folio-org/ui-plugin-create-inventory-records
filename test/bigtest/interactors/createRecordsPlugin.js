@@ -21,7 +21,22 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
   fillNoteField = fillable('[name="item.circulationNotes[0].note"]');
 }
 
-@interactor class LocationLookupInteractor {
+@interactor class ElectronicAccessInteractor {
+  selectRelationship = selectable('[name="item.electronicAccess[0].relationshipId"]')
+  fillUriField = fillable('[name="item.electronicAccess[0].uri"]');
+}
+
+@interactor class PermanentLocationLookupInteractor {
+  clickOnLocationBtn = clickable('#select_permanent_location');
+  chooseFirstLocation = clickable('#option-select_permanent_location-1-1');
+  locationSelectLoaded = isPresent('#sl-container-select_permanent_location');
+
+  whenLocationSelectLoaded() {
+    return this.when(() => this.locationSelectLoaded);
+  }
+}
+
+@interactor class TemporaryLocationLookupInteractor {
   clickOnLocationBtn = clickable('#select_permanent_location');
   chooseFirstLocation = clickable('#option-select_permanent_location-1-1');
   locationSelectLoaded = isPresent('#sl-container-select_permanent_location');
@@ -39,12 +54,14 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
 @interactor class FormInteractor {
   contributors = new ContributorsInteractor();
   circulationNotes = new CirculationNotesInteractor();
+  electronicAccess = new ElectronicAccessInteractor();
   fillTitleField = fillable('#input_instance_title');
   issnField = fillable('#issn');
   isbnField = fillable('#isbn');
   publicationDateField = fillable('#input_publication_date');
   selectInstanceType = selectable('#select_instance_type');
   openLocationLookup = clickable('[data-test-location-lookup-button]');
+  clickAddElectronicAccess = clickable('#clickable-add-electronic-access-add-button');
   selectMaterialType = selectable('#material_type');
   selectPermanentLoanType = selectable('#permanent_loan_type');
   selectInstanceStatus = selectable('#select_instance_status_term');
@@ -62,7 +79,8 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
   isLoaded = isPresent('[data-test-create-records-form]');
 
   callout = new CalloutInteractor();
-  locationLookup = new LocationLookupInteractor();
+  locationLookup = new PermanentLocationLookupInteractor();
+  tempLocationLookup = new TemporaryLocationLookupInteractor();
   cancelModal = new CancelConfirmModalInteractor('#cancel-editing-confirmation');
   cancelModalLoaded = isPresent('#cancel-editing-confirmation');
 

@@ -8,7 +8,11 @@ export default function config() {
   });
 
   this.get('/configurations/entries', {
-    configs: []
+    configs: [
+      {
+        value: '{"instanceStatusCode": "", "defaultDiscoverySuppress": "{}"}',
+      },
+    ],
   });
 
   this.post('/bl-users/login', () => {
