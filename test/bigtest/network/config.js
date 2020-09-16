@@ -10,7 +10,7 @@ export default function config() {
   this.get('/configurations/entries', {
     configs: [
       {
-        value: '{"instanceStatusCode": "", "defaultDiscoverySuppress": "{}"}',
+        value: '{"instanceStatusCode": "2", "defaultDiscoverySuppress": "true"}',
       },
     ],
   });

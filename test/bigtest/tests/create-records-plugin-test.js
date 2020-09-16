@@ -48,6 +48,39 @@ describe('CreateInventoryRecords', () => {
       });
     });
 
+    describe('input partial data, then click cancel', () => {
+      beforeEach(async () => {
+        await plugin.form.issnField('123');
+        await plugin.form.isbnField('456');
+        await plugin.form.fillTitleField('title');
+        await plugin.form.clickCancel();
+        await plugin.whenCancelModalLoaded();
+      });
+
+      it('opens the cancel confirm modal', () => {
+        expect(plugin.cancelModal.isPresent).to.be.true;
+      });
+
+      describe('click confirm', () => {
+        beforeEach(async () => {
+          await plugin.cancelModal.clickConfirm();
+        });
+        it('clicking confirm closes modal without closing form', () => {
+          expect(plugin.cancelModal.isPresent).to.be.false;
+          expect(plugin.form.isPresent).to.be.true;
+        });
+      });
+      describe('click cancel', () => {
+        beforeEach(async () => {
+          await plugin.cancelModal.clickCancel();
+        });
+        it('clicking cancel closes modal and form', () => {
+          expect(plugin.cancelModal.isPresent).to.be.false;
+          expect(plugin.form.isPresent).to.be.false;
+        });
+      });
+    });
+
     describe('save instance', () => {
       beforeEach(async () => {
         // instance record
@@ -81,39 +114,6 @@ describe('CreateInventoryRecords', () => {
 
       it('saves instance and closes modal', () => {
         expect(plugin.callout.successCalloutIsPresent).to.be.true;
-      });
-    });
-
-    describe('input partial data, then click cancel', () => {
-      beforeEach(async () => {
-        await plugin.form.issnField('123');
-        await plugin.form.isbnField('456');
-        await plugin.form.fillTitleField('title');
-        await plugin.form.clickCancel();
-        await plugin.whenCancelModalLoaded();
-      });
-
-      it('opens the cancel confirm modal', () => {
-        expect(plugin.cancelModal.isPresent).to.be.true;
-      });
-
-      describe('click confirm', () => {
-        beforeEach(async () => {
-          await plugin.cancelModal.clickConfirm();
-        });
-        it('clicking confirm closes modal without closing form', () => {
-          expect(plugin.cancelModal.isPresent).to.be.false;
-          expect(plugin.form.isPresent).to.be.true;
-        });
-      });
-      describe('click cancel', () => {
-        beforeEach(async () => {
-          await plugin.cancelModal.clickCancel();
-        });
-        it('clicking cancel closes modal and form', () => {
-          expect(plugin.cancelModal.isPresent).to.be.false;
-          expect(plugin.form.isPresent).to.be.false;
-        });
       });
     });
   });

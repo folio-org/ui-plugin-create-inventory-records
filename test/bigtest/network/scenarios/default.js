@@ -34,6 +34,6 @@ export default function defaultScenario(server) {
   server.create('electronic-access-relationship', { id: 1, name: 'Resource' });
   server.create('electronic-access-relationship', { id: 2, name: 'Related resource' });
 
-  server.create('instance-status', { name: 'Batch Loaded' });
-  server.create('instance-status', { name: 'Cataloged' });
+  server.create('instance-status', { id: '1', name: 'Batch Loaded' });
+  server.create('instance-status', { id: '2', name: 'Cataloged' });
 }

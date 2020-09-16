@@ -1,4 +1,7 @@
-import isEmpty from 'lodash/isEmpty';
+import {
+  isEqual,
+  isEmpty,
+} from 'lodash';
 import React, {
   useState,
   useCallback,
@@ -142,6 +145,7 @@ CreateRecordsForm.propTypes = {
 };
 
 export default stripesFinalForm({
+  initialValuesEqual: (a, b) => isEqual(a, b),
   validate,
   navigationCheck: true,
 })(CreateRecordsForm);

@@ -78,7 +78,7 @@
     "miragejs": "^0.1.40",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "react-intl": "^4.7.1",
+    "react-intl": "^5.8.0",
     "react-router-dom": "^5.2.0",
     "regenerator-runtime": "^0.13.3"
   },
@@ -95,7 +95,7 @@
   "peerDependencies": {
     "@folio/stripes": "^5.0.0",
     "react": "*",
-    "react-intl": "^4.7.1",
+    "react-intl": "^5.8.0",
     "react-router-dom": "^5.2.0"
   }
 }

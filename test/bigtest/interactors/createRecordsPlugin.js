@@ -36,16 +36,6 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
   }
 }
 
-@interactor class TemporaryLocationLookupInteractor {
-  clickOnLocationBtn = clickable('#select_permanent_location');
-  chooseFirstLocation = clickable('#option-select_permanent_location-1-1');
-  locationSelectLoaded = isPresent('#sl-container-select_permanent_location');
-
-  whenLocationSelectLoaded() {
-    return this.when(() => this.locationSelectLoaded);
-  }
-}
-
 @interactor class CancelConfirmModalInteractor {
   clickConfirm = clickable('#clickable-cancel-editing-confirmation-confirm');
   clickCancel = clickable('#clickable-cancel-editing-confirmation-cancel');
@@ -80,7 +70,6 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
 
   callout = new CalloutInteractor();
   locationLookup = new PermanentLocationLookupInteractor();
-  tempLocationLookup = new TemporaryLocationLookupInteractor();
   cancelModal = new CancelConfirmModalInteractor('#cancel-editing-confirmation');
   cancelModalLoaded = isPresent('#cancel-editing-confirmation');
 

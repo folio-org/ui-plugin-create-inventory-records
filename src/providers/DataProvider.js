@@ -25,11 +25,9 @@ const DataProvider = ({
   const data = useMemo(() => {
     const loadedData = {};
 
-    for (const key in manifest) {
-      if (manifest[key].type === 'okapi') {
-        loadedData[key] = resources?.[key]?.records ?? [];
-      }
-    }
+    Object.keys(manifest).forEach(key => {
+      loadedData[key] = resources?.[key]?.records ?? [];
+    });
 
     const { instanceStatuses, configs } = loadedData;
     const value = configs[0]?.value || '';
