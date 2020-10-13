@@ -1,6 +1,6 @@
 # Change history for ui-plugin-create-inventory-records
 
-## 1.0.0 (IN PROGRESS)
+## [1.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v1.0.0) (2020-10-13)
 
 * Removed permission allowing access to inventory.  Addresses UIPCIR-12.
 * Adding permissions to create holdings and item records.  Partially addresses UIPCIR-6
