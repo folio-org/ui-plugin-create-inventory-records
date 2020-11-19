@@ -54,5 +54,5 @@
     "circulationNotes.checkInNote": "Nota per la restituzione",
     "circulationNotes.checkOutNote": "Nota per il prestito",
     "selectInstanceStatus": "Seleziona stato istanza",
-    "permission.create": "Fast add: Create"
+    "permission.create": "Aggiunta rapida: Crea"
 }
