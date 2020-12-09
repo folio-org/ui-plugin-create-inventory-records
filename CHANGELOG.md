@@ -1,5 +1,8 @@
 # Change history for ui-plugin-create-inventory-records
 
+## 2.0.0 (IN PROGRESS)
+* Update permission for because of renaming of instance-bulk endpoint. Refs UIIN-1368.
+
 ## [1.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v1.0.0) (2020-10-13)
 
 * Removed permission allowing access to inventory.  Addresses UIPCIR-12.
