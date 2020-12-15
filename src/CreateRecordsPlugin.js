@@ -28,11 +28,11 @@ const CreateRecordsPlugin = ({
     }
   }, [onOpen]);
 
-  const closeModal = useCallback(() => {
+  const closeModal = useCallback((...args) => {
     toggleModal(false);
 
     if (onClose) {
-      onClose();
+      onClose(...args);
     }
   }, [onClose]);
 

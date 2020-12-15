@@ -72,13 +72,17 @@ const CreateRecordsWrapper = ({
     try {
       const instanceRecord = await createInstanceRecord.POST(parseInstance(instance, identifierTypesByName));
       const holdingsRecord = await createHoldingsRecord.POST(parseHolding(holding, instanceRecord));
-      await createItemRecord.POST(parseItem(item, holdingsRecord));
+      const itemRecord = await createItemRecord.POST(parseItem(item, holdingsRecord));
 
       callout.sendCallout({
         message: <FormattedMessage id="ui-plugin-create-inventory-records.onSave.success" />,
       });
 
-      onClose();
+      onClose({
+        instanceRecord,
+        holdingsRecord,
+        itemRecord,
+      });
     } catch (error) {
       callout.sendCallout({
         message: <FormattedMessage id="ui-plugin-create-inventory-records.onSave.error" />,

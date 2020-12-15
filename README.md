@@ -13,6 +13,16 @@ type="create-inventory-records">` element. See [the *Plugins*
 section](https://github.com/folio-org/stripes-core/blob/master/doc/dev-guide.md#plugins)
 of the Module Developer's Guide.
 
+## Props
+
+The following props can be passed to the `Pluggable` component. They will be passed through to this plugin.
+
+| prop | type | description |
+|------|------|-------------|
+| `buttonVisible` | boolean | When true, this plugin will render its own trigger that opens the modal |
+| `onClose` | Object: `{ instanceRecord, holdingsRecord, itemRecord }` | Function called upon closing the modal. If the close is the result of a successful record creation, then an object will be passed that contains info about the created records. |
+| `open` | boolean | When true, this plugin will render the record-creation modal. |
+
 ## Additional information
 
 Other [modules](https://dev.folio.org/source-code/#client-side).
