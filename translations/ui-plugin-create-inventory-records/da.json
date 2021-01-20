@@ -1,5 +1,5 @@
 {
-    "meta.title": "Create inventory records (plugin)",
+    "meta.title": "Opret bibliografiskeregistreringer i katalogen (plugin)",
     "fastAddLabel": "New fast add record",
     "instanceRecord": "Instance",
     "discoverySuppress": "Suppress from discovery",
@@ -13,8 +13,8 @@
     "resourceType": "Resource type",
     "cancel": "Cancel",
     "saveAndClose": "Save and close",
-    "onSave.success": "Inventory records have been created successfully",
-    "onSave.error": "Saving inventory records failed",
+    "onSave.success": "Lagring af bibliografiskeregistreringer i katalogen lykkedes",
+    "onSave.error": "Lagring af bibliografiskeregistreringer i katalogen fejlede",
     "addContributor": "Add contributor",
     "contributors": "Contributors",
     "contributors.name": "Name",
