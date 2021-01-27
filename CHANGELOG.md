@@ -6,6 +6,7 @@
 * Wrapped rendering in an `IfPermission` check.
 * Added `renderTrigger` prop to customize trigger rendering within the `IfPermission` check.
 * BREAKING CHANGE - Removed `buttonVisible` prop. `renderTrigger` should be used instead.
+* Upgrade to stripes v6. Fixes UIPCIR-16.
 
 ## [1.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v1.0.0) (2020-10-13)
 
