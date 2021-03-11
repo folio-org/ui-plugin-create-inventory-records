@@ -1,6 +1,6 @@
 # Change history for ui-plugin-create-inventory-records
 
-## 2.0.0 (IN PROGRESS)
+## [2.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v2.0.0) (2021-03-11)
 * Update permission for because of renaming of instance-bulk endpoint. Refs UIIN-1368.
 * Updated `onClose` prop to receive arg containing instance, holdings, and item record data. Refs UICR-91.
 * Wrapped rendering in an `IfPermission` check.
