@@ -18,9 +18,9 @@ import {
 import { circulationNoteTypes } from '../../consts';
 
 const CirculationNoteFields = () => {
-  const intl = useIntl();
+  const { formatMessage } = useIntl();
   const noteOptions = circulationNoteTypes.map(({ id, value }) => ({
-    label: intl.formatMessage({ id }),
+    label: formatMessage({ id }),
     value,
   }));
 
@@ -34,16 +34,13 @@ const CirculationNoteFields = () => {
       renderField={(_, index) => (
         <Row>
           <Col sm={4}>
-            <FormattedMessage id="ui-plugin-create-inventory-records.selectType">
-              {placeholder => <Field
-                label={<FormattedMessage id="ui-plugin-create-inventory-records.circulationNotes.noteType" />}
-                name={`item.circulationNotes[${index}].noteType`}
-                placeholder={placeholder}
-                component={Select}
-                dataOptions={noteOptions}
-              />
-              }
-            </FormattedMessage>
+            <Field
+              label={<FormattedMessage id="ui-plugin-create-inventory-records.circulationNotes.noteType" />}
+              name={`item.circulationNotes[${index}].noteType`}
+              placeholder={formatMessage({ id: 'ui-plugin-create-inventory-records.selectType' })}
+              component={Select}
+              dataOptions={noteOptions}
+            />
           </Col>
           <Col sm={4}>
             <Field

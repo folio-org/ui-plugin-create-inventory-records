@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Field } from 'react-final-form';
 import { FieldArray } from 'react-final-form-arrays';
 
@@ -19,6 +19,7 @@ import {
 
 const ContributorFields = () => {
   const { contributorNameTypes } = useData();
+  const { formatMessage } = useIntl();
   const contributorNameTypeOptions = useOptions(contributorNameTypes, 'id', 'name');
 
   return (
@@ -39,17 +40,14 @@ const ContributorFields = () => {
             />
           </Col>
           <Col sm={4}>
-            <FormattedMessage id="ui-plugin-create-inventory-records.contributors.selectType">
-              {placeholder => <Field
-                label={<FormattedMessage id="ui-plugin-create-inventory-records.contributors.nameType" />}
-                name={`instance.contributors[${index}].contributorNameTypeId`}
-                required
-                placeholder={placeholder}
-                component={Select}
-                dataOptions={contributorNameTypeOptions}
-              />
-              }
-            </FormattedMessage>
+            <Field
+              label={<FormattedMessage id="ui-plugin-create-inventory-records.contributors.nameType" />}
+              name={`instance.contributors[${index}].contributorNameTypeId`}
+              required
+              placeholder={formatMessage({ id: 'ui-plugin-create-inventory-records.contributors.selectType' })}
+              component={Select}
+              dataOptions={contributorNameTypeOptions}
+            />
           </Col>
           <Col sm={4}>
             <Field

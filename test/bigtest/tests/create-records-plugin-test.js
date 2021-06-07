@@ -48,6 +48,18 @@ describe('CreateInventoryRecords', () => {
       });
     });
 
+    describe('validate barcode', () => {
+      beforeEach(async function () {
+        this.server.get('/inventory/items?query=(barcode=="123")', {}, 500);
+        await plugin.form.fillBarcodeField('123');
+        await plugin.form.clickSaveButton();
+      });
+
+      it('keeps form open', () => {
+        expect(plugin.form.isPresent).to.be.true;
+      });
+    });
+
     describe('input partial data, then click cancel', () => {
       beforeEach(async () => {
         await plugin.form.issnField('123');

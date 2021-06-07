@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Field } from 'react-final-form';
 
 import {
@@ -23,6 +23,7 @@ const InstanceAccordion = () => {
     instanceTypes,
     instanceStatuses,
   } = useData();
+  const { formatMessage } = useIntl();
   const resourceTypeOptions = useOptions(instanceTypes, 'id', 'name');
   const instanceStatusOptions = useOptions(instanceStatuses, 'id', 'name');
 
@@ -42,18 +43,14 @@ const InstanceAccordion = () => {
           />
         </Col>
         <Col sm={4}>
-          <FormattedMessage id="ui-plugin-create-inventory-records.selectInstanceStatus">
-            {placeholder => (
-              <Field
-                label={<FormattedMessage id="ui-plugin-create-inventory-records.instanceStatusTerm" />}
-                name="instance.statusId"
-                id="select_instance_status_term"
-                component={Select}
-                placeholder={placeholder}
-                dataOptions={instanceStatusOptions}
-              />
-            )}
-          </FormattedMessage>
+          <Field
+            label={<FormattedMessage id="ui-plugin-create-inventory-records.instanceStatusTerm" />}
+            name="instance.statusId"
+            id="select_instance_status_term"
+            component={Select}
+            placeholder={formatMessage({ id: 'ui-plugin-create-inventory-records.selectInstanceStatus' })}
+            dataOptions={instanceStatusOptions}
+          />
         </Col>
       </Row>
       <Row>
@@ -97,20 +94,16 @@ const InstanceAccordion = () => {
           />
         </Col>
         <Col sm={4}>
-          <FormattedMessage id="ui-plugin-create-inventory-records.selectResourceType">
-            {placeholder => (
-              <Field
-                label={<FormattedMessage id="ui-plugin-create-inventory-records.resourceType" />}
-                name="instance.instanceTypeId"
-                id="select_instance_type"
-                type="text"
-                required
-                component={Select}
-                placeholder={placeholder}
-                dataOptions={resourceTypeOptions}
-              />
-            )}
-          </FormattedMessage>
+          <Field
+            label={<FormattedMessage id="ui-plugin-create-inventory-records.resourceType" />}
+            name="instance.instanceTypeId"
+            id="select_instance_type"
+            type="text"
+            required
+            component={Select}
+            placeholder={formatMessage({ id: 'ui-plugin-create-inventory-records.selectResourceType' })}
+            dataOptions={resourceTypeOptions}
+          />
         </Col>
       </Row>
       <ContributorFields />

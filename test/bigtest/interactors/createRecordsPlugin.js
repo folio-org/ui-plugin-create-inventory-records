@@ -48,6 +48,7 @@ import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/inter
   circulationNotes = new CirculationNotesInteractor();
   electronicAccess = new ElectronicAccessInteractor();
   fillTitleField = fillable('#input_instance_title');
+  fillBarcodeField = fillable('#barcode');
   issnField = fillable('#issn');
   isbnField = fillable('#isbn');
   publicationDateField = fillable('#input_publication_date');

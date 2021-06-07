@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Field } from 'react-final-form';
 import { FieldArray } from 'react-final-form-arrays';
 
@@ -17,6 +17,7 @@ import {
 } from '../../hooks';
 
 const ElectronicAccessFields = () => {
+  const { formatMessage } = useIntl();
   const { electronicAccessRelationships } = useData();
   const eaOptions = useOptions(electronicAccessRelationships, 'id', 'name');
 
@@ -30,16 +31,13 @@ const ElectronicAccessFields = () => {
       renderField={(_, index) => (
         <Row>
           <Col sm={4}>
-            <FormattedMessage id="ui-plugin-create-inventory-records.selectType">
-              {placeholder => <Field
-                label={<FormattedMessage id="ui-plugin-create-inventory-records.electronicAccess.relationship" />}
-                name={`item.electronicAccess[${index}].relationshipId`}
-                placeholder={placeholder}
-                component={Select}
-                dataOptions={eaOptions}
-              />
-              }
-            </FormattedMessage>
+            <Field
+              label={<FormattedMessage id="ui-plugin-create-inventory-records.electronicAccess.relationship" />}
+              name={`item.electronicAccess[${index}].relationshipId`}
+              placeholder={formatMessage({ id: 'ui-plugin-create-inventory-records.selectType' })}
+              component={Select}
+              dataOptions={eaOptions}
+            />
           </Col>
           <Col sm={2}>
             <Field

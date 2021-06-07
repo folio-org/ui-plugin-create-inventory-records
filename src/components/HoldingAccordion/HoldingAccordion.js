@@ -1,7 +1,7 @@
 
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Field } from 'react-final-form';
 
 import {
@@ -24,6 +24,7 @@ import {
 const HoldingAccordion = ({ change }) => {
   const { callNumberTypes } = useData();
   const callNumberTypeOptions = useOptions(callNumberTypes, 'id', 'name');
+  const { formatMessage } = useIntl();
 
   const selectLocation = useCallback((name, loc) => {
     if (!loc) {
@@ -41,55 +42,43 @@ const HoldingAccordion = ({ change }) => {
     >
       <Row>
         <Col sm={4}>
-          <FormattedMessage id="ui-plugin-create-inventory-records.selectLocation">
-            {placeholder => (
-              <Field
-                label={<FormattedMessage id="ui-plugin-create-inventory-records.permanentLocation" />}
-                placeholder={placeholder}
-                name="holding.permanentLocationId"
-                id="select_permanent_location"
-                component={LocationSelection}
-                fullWidth
-                marginBottom0
-                onSelect={loc => selectLocation('permanentLocationId', loc)}
-                required
-              />
-            )}
-          </FormattedMessage>
+          <Field
+            label={<FormattedMessage id="ui-plugin-create-inventory-records.permanentLocation" />}
+            placeholder={formatMessage({ id: 'ui-plugin-create-inventory-records.selectLocation' })}
+            name="holding.permanentLocationId"
+            id="select_permanent_location"
+            component={LocationSelection}
+            fullWidth
+            marginBottom0
+            onSelect={loc => selectLocation('permanentLocationId', loc)}
+            required
+          />
           <LocationLookup onLocationSelected={loc => selectLocation('permanentLocationId', loc)} />
         </Col>
         <Col sm={4}>
-          <FormattedMessage id="ui-plugin-create-inventory-records.selectLocation">
-            {placeholder => (
-              <Field
-                label={<FormattedMessage id="ui-plugin-create-inventory-records.temporaryLocation" />}
-                placeholder={placeholder}
-                name="holding.temporaryLocationId"
-                id="select_temporary_location"
-                component={LocationSelection}
-                fullWidth
-                marginBottom0
-                onSelect={loc => selectLocation('temporaryLocationId', loc)}
-              />
-            )}
-          </FormattedMessage>
+          <Field
+            label={<FormattedMessage id="ui-plugin-create-inventory-records.temporaryLocation" />}
+            placeholder={formatMessage({ id: 'ui-plugin-create-inventory-records.selectLocation' })}
+            name="holding.temporaryLocationId"
+            id="select_temporary_location"
+            component={LocationSelection}
+            fullWidth
+            marginBottom0
+            onSelect={loc => selectLocation('temporaryLocationId', loc)}
+          />
           <LocationLookup onLocationSelected={loc => selectLocation('temporaryLocationId', loc)} />
         </Col>
       </Row>
       <Row>
         <Col sm={3}>
-          <FormattedMessage id="ui-plugin-create-inventory-records.selectType">
-            {placeholder => (
-              <Field
-                label={<FormattedMessage id="ui-plugin-create-inventory-records.callNumberType" />}
-                name="holding.callNumberTypeId"
-                id="select_call_number_type"
-                component={Select}
-                placeholder={placeholder}
-                dataOptions={callNumberTypeOptions}
-              />
-            )}
-          </FormattedMessage>
+          <Field
+            label={<FormattedMessage id="ui-plugin-create-inventory-records.callNumberType" />}
+            name="holding.callNumberTypeId"
+            id="select_call_number_type"
+            component={Select}
+            placeholder={formatMessage({ id: 'ui-plugin-create-inventory-records.selectType' })}
+            dataOptions={callNumberTypeOptions}
+          />
         </Col>
         <Col sm={3}>
           <Field

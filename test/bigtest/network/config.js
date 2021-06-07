@@ -109,6 +109,8 @@ export default function config() {
     totalRecords: 0
   });
 
+  this.get('remote-storage/mappings');
+
   this.post('/inventory/instances', ({ instances }, request) => {
     const body = JSON.parse(request.requestBody);
     const instance = instances.create(body);

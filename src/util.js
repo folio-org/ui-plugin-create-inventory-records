@@ -196,4 +196,66 @@ export const parseItem = (item, holding) => {
   return item;
 };
 
+export const mutators = {
+  updateValue: ([name, newValue], state, utils) => {
+    utils.changeValue(state, name, () => newValue);
+  },
+};
+
+function checkUniqueBarcode(okapi, barcode) {
+  const { tenant, token } = okapi;
+
+  return fetch(`${okapi.url}/inventory/items?query=(barcode=="${barcode}")`,
+    {
+      headers: {
+        'X-Okapi-Tenant': tenant,
+        'X-Okapi-Token': token,
+        'Content-Type': 'application/json',
+      },
+    });
+}
+
+// Memoize is used by final-form to help with async field validation
+// https://github.com/final-form/react-final-form/issues/292
+// https://codesandbox.io/s/wy7z7q5zx5
+export function memoize(fn) {
+  let lastArg;
+  let lastResult;
+
+  return arg => {
+    if (arg !== lastArg) {
+      lastArg = arg;
+      lastResult = fn(arg);
+    }
+
+    return lastResult;
+  };
+}
+
+export function validateBarcode(okapi) {
+  return memoize(async (barcode) => {
+    if (!barcode) return '';
+
+    const error = <FormattedMessage id="ui-plugin-create-inventory-records.barcodeTaken" />;
+
+    try {
+      const response = await checkUniqueBarcode(okapi, barcode);
+
+      if (response.status >= 400) {
+        return error;
+      }
+
+      const json = await response.json();
+
+      if (json.totalRecords > 0) {
+        return error;
+      }
+    } catch (err) {
+      return error;
+    }
+
+    return '';
+  });
+}
+
 export default {};
