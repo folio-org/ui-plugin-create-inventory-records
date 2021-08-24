@@ -28,3 +28,4 @@
 * Add defaults from Settings when creating a fast add record. Refs UIPCIR-7.
 * Correctly locate `okapiInterfaces` in `package.json`. Fixes UIPCIR-11.
 * Provide fast-add permission set. Refs UIPCIR-6.
+* Add alternate okapiInterfaces dependencies for `inventory 11.0`, `instance-storage 8.0`, `holdings-storage 5.0`, and `item-storage 9.0`. Refs UIPCIR-26.
