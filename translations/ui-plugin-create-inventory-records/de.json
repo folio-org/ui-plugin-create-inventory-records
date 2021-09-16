@@ -55,5 +55,5 @@
     "circulationNotes.checkOutNote": "Rückgabenotiz",
     "selectInstanceStatus": "Instanzstatus auswählen",
     "permission.create": "Kurzaufnahme: Erstellen",
-    "barcodeTaken": "This barcode has already been taken"
+    "barcodeTaken": "Dieser Barcode ist bereits vergeben"
 }
