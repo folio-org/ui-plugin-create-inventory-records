@@ -1,6 +1,7 @@
 # Change history for ui-plugin-create-inventory-records
 
-## [3.0.0] IN PROGRESS
+## [3.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.0.0) (2021-10-05)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v2.1.0...v3.0.0)
 
 * Increment stripes to v7, react to v17. Refs UIPCIR-25.
 
