@@ -115,7 +115,9 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "stripes test karma"
+    "test": "stripes test karma",
+    "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
+    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-plugin-create-inventory-records ./translations/ui-plugin-create-inventory-records/compiled"
   },
   "devDependencies": {
     "@bigtest/interactor": "^0.9.1",
@@ -126,6 +128,7 @@
     "@folio/stripes-cli": "^2.0.0",
     "@folio/stripes-components": "^10.0.0",
     "@folio/stripes-core": "^8.0.0",
+    "@formatjs/cli": "^4.2.20",
     "babel-eslint": "^10.0.3",
     "chai": "^4.2.0",
     "core-js": "^3.6.4",
