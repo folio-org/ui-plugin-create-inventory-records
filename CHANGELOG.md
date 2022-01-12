@@ -4,6 +4,7 @@
 
 * Update mocha version. Refs UIPCIR-32.
 * Also support `circulation` `12.0`. Refs UIPCIR-30.
+* Also support `circulation` `13.0`. Refs UIPCIR-31.
 
 ## [3.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.0.0) (2021-10-05)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v2.1.0...v3.0.0)
