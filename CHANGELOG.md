@@ -1,6 +1,7 @@
 # Change history for ui-plugin-create-inventory-records
 
-## IN PROGRESS
+## [3.1.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.1.0) (2022-03-03)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.0.0...v3.1.0)
 
 * Update mocha version. Refs UIPCIR-32.
 * Also support `circulation` `12.0`. Refs UIPCIR-30.
