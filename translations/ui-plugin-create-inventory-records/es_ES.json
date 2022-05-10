@@ -1,6 +1,6 @@
 {
     "meta.title": "Crear registros de inventario (plugin)",
-    "fastAddLabel": "New fast add record",
+    "fastAddLabel": "Nuevo registro al vuelo",
     "instanceRecord": "Instance",
     "discoverySuppress": "Suppress from discovery",
     "instanceStatusTerm": "Instance status term",
@@ -24,7 +24,7 @@
     "contributors.selectType": "Select type",
     "selectToContinue": "Please select to continue",
     "fillIn": "Please fill this in to continue",
-    "holdingsRecord": "Holdings",
+    "holdingsRecord": "Fondos",
     "permanentLocation": "Permanent location",
     "temporaryLocation": "Temporary location",
     "selectLocation": "Select location",
@@ -54,6 +54,6 @@
     "circulationNotes.checkInNote": "Check in note",
     "circulationNotes.checkOutNote": "Nota de préstamo",
     "selectInstanceStatus": "Select instance status",
-    "permission.create": "Fast add: Create",
+    "permission.create": "Al vuelo: Crear",
     "barcodeTaken": "This barcode has already been taken"
 }
