@@ -1,5 +1,5 @@
 {
-    "meta.title": "Create inventory records (plugin)",
+    "meta.title": "Vytvoření záznamů o inventáři (plugin)",
     "fastAddLabel": "New fast add record",
     "instanceRecord": "Instance",
     "discoverySuppress": "Suppress from discovery",
@@ -13,8 +13,8 @@
     "resourceType": "Resource type",
     "cancel": "Cancel",
     "saveAndClose": "Save and close",
-    "onSave.success": "Inventory records have been created successfully",
-    "onSave.error": "Saving inventory records failed",
+    "onSave.success": "Záznamy katalogu byly úspěšně vytvořeny",
+    "onSave.error": "Uložení záznamů katalogu se nezdařilo",
     "addContributor": "Add contributor",
     "contributors": "Contributors",
     "contributors.name": "Name",
