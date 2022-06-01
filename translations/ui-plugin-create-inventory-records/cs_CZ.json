@@ -2,7 +2,7 @@
     "meta.title": "Vytvoření záznamů o inventáři (plugin)",
     "fastAddLabel": "New fast add record",
     "instanceRecord": "Instance",
-    "discoverySuppress": "Suppress from discovery",
+    "discoverySuppress": "Vyřadit z objevování",
     "instanceStatusTerm": "Instance status term",
     "instanceStatusTerm.uncataloged": "Uncataloged (UC: uc)",
     "resourceTitle": "Resource title",
