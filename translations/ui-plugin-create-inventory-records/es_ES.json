@@ -34,11 +34,11 @@
     "callNumberSuffix": "Call number suffix",
     "selectType": "Select type",
     "itemRecord": "Item",
-    "barcode": "Barcode",
+    "barcode": "Código de barras",
     "selectMaterialType": "Select material type",
-    "materialType": "Material type",
-    "selectLoanType": "Select loan type",
-    "permanentLoanType": "Permanent loan type",
+    "materialType": "Tipo de material",
+    "selectLoanType": "Seleccionar tipo de préstamo",
+    "permanentLoanType": "Tipo de préstamo permanente",
     "electronicAccess": "Electronic access",
     "addElectronicAccess": "Add electronic access",
     "electronicAccess.relationship": "Relationship",
@@ -55,5 +55,5 @@
     "circulationNotes.checkOutNote": "Nota de préstamo",
     "selectInstanceStatus": "Select instance status",
     "permission.create": "Al vuelo: Crear",
-    "barcodeTaken": "This barcode has already been taken"
+    "barcodeTaken": "Este código de barras ya ha sido asignado"
 }
