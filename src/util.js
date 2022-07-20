@@ -1,4 +1,5 @@
 import isEmpty from 'lodash/isEmpty';
+import debounce from 'lodash/debounce';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
@@ -232,8 +233,10 @@ export function memoize(fn) {
   };
 }
 
+const debounceAndMemoize = (func, wait) => debounce(memoize(func), wait);
+
 export function validateBarcode(okapi) {
-  return memoize(async (barcode) => {
+  return debounceAndMemoize(async (barcode) => {
     if (!barcode) return '';
 
     const error = <FormattedMessage id="ui-plugin-create-inventory-records.barcodeTaken" />;
@@ -255,7 +258,7 @@ export function validateBarcode(okapi) {
     }
 
     return '';
-  });
+  }, 500);
 }
 
 export default {};
