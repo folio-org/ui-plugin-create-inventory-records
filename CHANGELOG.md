@@ -2,6 +2,8 @@
 
 ## [3.2.0] IN PROGRESS
 
+* Debounce barcode validation. Fixes UIPCIR-40.
+
 ## [3.1.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.1.0) (2022-03-03)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.0.0...v3.1.0)
 
