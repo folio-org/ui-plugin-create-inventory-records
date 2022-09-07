@@ -45,7 +45,7 @@
     "electronicAccess.uri": "URI",
     "electronicAccess.linkText": "链接文本",
     "electronicAccess.materialsSpecification": "特定资料",
-    "electronicAccess.publicNote": "URL公共附注",
+    "electronicAccess.publicNote": "URL 的公開附註",
     "circulationNotes": "单件附注",
     "addCirculationNote": "添加归还/借出附注",
     "circulationNotes.noteType": "附註類型",
