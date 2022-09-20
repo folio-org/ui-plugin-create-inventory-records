@@ -7,6 +7,7 @@
 * Also support `holdings-storage` `6.0`. Refs UIPCIR-42.
 * Also support `item-storage` `10.0`. Refs UIPCIR-42.
 * Also support `inventory` `12.0`. Refs UIPCIR-44.
+* Bump `users` interface to version `16.0`. Refs UIPCIR-41.
 
 ## [3.1.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.1.0) (2022-03-03)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.0.0...v3.1.0)
