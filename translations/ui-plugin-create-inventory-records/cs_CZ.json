@@ -1,9 +1,9 @@
 {
     "meta.title": "Vytvoření záznamů o inventáři (plugin)",
     "fastAddLabel": "Nový záznam rychlého přidání",
-    "instanceRecord": "Instance",
-    "discoverySuppress": "Vyřadit z objevování",
-    "instanceStatusTerm": "Termín stavu instance",
+    "instanceRecord": "Titul",
+    "discoverySuppress": "Potlačit z objevování",
+    "instanceStatusTerm": "Termín stavu titulu",
     "instanceStatusTerm.uncataloged": "Nekatalogizováno (UC: uc)",
     "resourceTitle": "Název zdroje",
     "publicationDate": "Datum publikace",
@@ -53,7 +53,7 @@
     "circulationNotes.staffOnly": "Pouze pro zaměstnance",
     "circulationNotes.checkInNote": "Poznámka Návratu",
     "circulationNotes.checkOutNote": "Poznámka výpůjčky",
-    "selectInstanceStatus": "Vyberte stav instance",
+    "selectInstanceStatus": "Vyberte stav titulu",
     "permission.create": "Rychlé přidání: Vytvořit",
     "barcodeTaken": "Tento čárový kód již byl použit"
 }
