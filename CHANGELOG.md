@@ -1,5 +1,7 @@
 # Change history for ui-plugin-create-inventory-records
 
+## 3.3.0 IN PROGRESS
+
 ## [3.2.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.2.0) (2022-10-24)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.1.0...v3.2.0)
 
