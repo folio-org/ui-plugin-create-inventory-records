@@ -54,6 +54,6 @@
     "circulationNotes.checkInNote": "Nota per la restituzione",
     "circulationNotes.checkOutNote": "Nota per il prestito",
     "selectInstanceStatus": "Seleziona stato istanza",
-    "permission.create": "Aggiunta rapida: Crea",
+    "permission.create": "Aggiunta rapida: creare",
     "barcodeTaken": "Questo barcode è già stato usato"
 }
