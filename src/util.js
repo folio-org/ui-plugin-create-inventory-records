@@ -178,8 +178,9 @@ export const parseInstance = (instance, identifierTypesByName) => {
   return instance;
 };
 
-export const parseHolding = (holding, instance) => {
+export const parseHolding = (holding, instance, holdingsSourcesByName) => {
   holding.instanceId = instance.id;
+  holding.sourceId = holdingsSourcesByName.FOLIO.id;
 
   return holding;
 };

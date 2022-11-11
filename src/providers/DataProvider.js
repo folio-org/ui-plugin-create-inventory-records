@@ -47,6 +47,7 @@ const DataProvider = ({
     }
     loadedData.settings = config;
     loadedData.identifierTypesByName = keyBy(loadedData.identifierTypes, 'name');
+    loadedData.holdingsSourcesByName = keyBy(loadedData.holdingsSources, 'name');
 
     return loadedData;
   }, [resources, manifest]);
@@ -117,6 +118,15 @@ DataProvider.manifest = Object.freeze({
     records: 'electronicAccessRelationships',
     path: 'electronic-access-relationships?limit=1000&query=cql.allRecords=1 sortby name',
   },
+  holdingsSources: {
+    type: 'okapi',
+    path: 'holdings-sources',
+    params: {
+      query: 'cql.allRecords=1 sortby name',
+      limit: '1000',
+    },
+    records: 'holdingsRecordsSources',
+  }
 });
 
 export default stripesConnect(DataProvider);

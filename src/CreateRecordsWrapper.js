@@ -48,6 +48,7 @@ const CreateRecordsWrapper = ({
 }) => {
   const {
     identifierTypesByName,
+    holdingsSourcesByName,
     settings,
   } = useData();
   const callout = useCallout();
@@ -71,7 +72,7 @@ const CreateRecordsWrapper = ({
 
     try {
       const instanceRecord = await createInstanceRecord.POST(parseInstance(instance, identifierTypesByName));
-      const holdingsRecord = await createHoldingsRecord.POST(parseHolding(holding, instanceRecord));
+      const holdingsRecord = await createHoldingsRecord.POST(parseHolding(holding, instanceRecord, holdingsSourcesByName));
       const itemRecord = await createItemRecord.POST(parseItem(item, holdingsRecord));
 
       callout.sendCallout({
@@ -96,6 +97,7 @@ const CreateRecordsWrapper = ({
     createHoldingsRecord,
     createItemRecord,
     identifierTypesByName,
+    holdingsSourcesByName,
   ]);
 
   if (isLoading) return null;
