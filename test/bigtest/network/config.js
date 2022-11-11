@@ -63,6 +63,20 @@ export default function config() {
     totalRecords: 1,
   });
 
+
+  this.get('/holdings-sources', {
+    holdingsRecordsSources: [{
+      id: 'f32d531e-df79-46b3-8932-cdd35f7a2264',
+      name: 'FOLIO',
+      source: 'folio'
+    }, {
+      id: '036ee84a-6afd-4c3c-9ad3-4a12ab875f59',
+      name: 'MARC',
+      source: 'folio'
+    }],
+    totalRecords: 2
+  });
+
   this.get('/locations', {
     locations: [
       {
