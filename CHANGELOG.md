@@ -1,5 +1,10 @@
 # Change history for ui-plugin-create-inventory-records
 
+## [3.2.1](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.2.1) (2022-11-17)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.2.0...v3.2.1)
+
+* Set correct `sourceId` on holdings records. Fixes UIPCIR-47.
+
 ## [3.2.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.2.0) (2022-10-24)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.1.0...v3.2.0)
 
