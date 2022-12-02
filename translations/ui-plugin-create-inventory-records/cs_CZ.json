@@ -1,5 +1,5 @@
 {
-    "meta.title": "Vytvoření záznamů o inventáři (plugin)",
+    "meta.title": "Vytvořit záznamy katalogu (plugin)",
     "fastAddLabel": "Nový záznam rychlého přidání",
     "instanceRecord": "Titul",
     "discoverySuppress": "Potlačit z objevování",
@@ -47,12 +47,12 @@
     "electronicAccess.materialsSpecification": "Materiály specifikované",
     "electronicAccess.publicNote": "Veřejná poznámka URL",
     "circulationNotes": "Poznámky jednotky",
-    "addCirculationNote": "Přidejte poznámku k Návratu / Výpůjčky",
+    "addCirculationNote": "Přidat poznámku k Návratu / Výpůjčce",
     "circulationNotes.noteType": "Typ poznámky",
     "circulationNotes.name": "Poznámka",
     "circulationNotes.staffOnly": "Pouze pro zaměstnance",
     "circulationNotes.checkInNote": "Poznámka Návratu",
-    "circulationNotes.checkOutNote": "Poznámka výpůjčky",
+    "circulationNotes.checkOutNote": "Poznámka Výpůjčky",
     "selectInstanceStatus": "Vyberte stav titulu",
     "permission.create": "Rychlé přidání: Vytvořit",
     "barcodeTaken": "Tento čárový kód již byl použit"
