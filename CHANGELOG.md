@@ -1,6 +1,7 @@
 # Change history for ui-plugin-create-inventory-records
 
-## 3.3.0 IN PROGRESS
+## [3.3.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.3.0) (2023-02-20)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.2.0...v3.3.0)
 
 * Set correct `sourceId` on holdings records. Fixes UIPCIR-47.
 * Update inventory interface to version 13. Refs UIPCIR-49.
