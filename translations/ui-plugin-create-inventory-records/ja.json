@@ -45,7 +45,7 @@
     "electronicAccess.uri": "URI",
     "electronicAccess.linkText": "Link text",
     "electronicAccess.materialsSpecification": "Materials specified",
-    "electronicAccess.publicNote": "URL public note",
+    "electronicAccess.publicNote": "URL 公開ノート",
     "circulationNotes": "Item notes",
     "addCirculationNote": "貸出/返却のノートを追加する",
     "circulationNotes.noteType": "ノートタイプ",
