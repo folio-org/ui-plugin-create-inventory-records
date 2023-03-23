@@ -103,7 +103,7 @@ const CreateRecordsForm = ({
                 disabled={pristine || submitting}
                 onClick={handleSubmit}
               >
-                <FormattedMessage id="ui-plugin-create-inventory-records.saveAndClose" />
+                <FormattedMessage id="stripes-components.saveAndClose" />
               </Button>
             }
           />
