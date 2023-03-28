@@ -1,6 +1,7 @@
 # Change history for ui-plugin-create-inventory-records
 
 ## 3.4.0 IN PROGRESS
+* To support UX consistency, the translation key from the stripes components for the save and close button is now used. Fixes UIPCIR-52.
 
 ## [3.3.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.3.0) (2023-02-20)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.2.0...v3.3.0)

@@ -15,7 +15,6 @@
   "selectInstanceStatus": "Select instance status",
   "resourceType": "Resource type",
   "cancel": "Cancel",
-  "saveAndClose": "Save and close",
   "onSave.success": "Inventory records have been created successfully",
   "onSave.error": "Saving inventory records failed",
   "addContributor": "Add contributor",
