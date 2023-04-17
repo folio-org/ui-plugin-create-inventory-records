@@ -12,7 +12,6 @@
     "selectResourceType": "اختر نوع المورد",
     "resourceType": "نوع المورد",
     "cancel": "إلغاء",
-    "saveAndClose": "حفظ وإغلاق",
     "onSave.success": "تم إنشاء تسجيلات المخزون بنجاح",
     "onSave.error": "فشل حفظ تسجيلات المخزون",
     "addContributor": "إضافة مساهم",

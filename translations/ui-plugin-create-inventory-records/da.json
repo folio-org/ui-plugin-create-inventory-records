@@ -12,7 +12,6 @@
     "selectResourceType": "Select resource type",
     "resourceType": "Resource type",
     "cancel": "Cancel",
-    "saveAndClose": "Gem & luk",
     "onSave.success": "Bibliografiske registreringer blev gemt",
     "onSave.error": "Bibliografiske registreringer blev ikke gemt",
     "addContributor": "Add contributor",

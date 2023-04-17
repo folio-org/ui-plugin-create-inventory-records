@@ -12,7 +12,6 @@
     "selectResourceType": "リソースタイプを選択",
     "resourceType": "リソースタイプ",
     "cancel": "キャンセル",
-    "saveAndClose": "保存して閉じる",
     "onSave.success": "Inventory records have been created successfully",
     "onSave.error": "Saving inventory records failed",
     "addContributor": "寄与者を追加",

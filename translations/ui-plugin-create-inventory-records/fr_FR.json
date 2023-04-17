@@ -12,7 +12,6 @@
     "selectResourceType": "Sélectionner le type de ressource",
     "resourceType": "Type de ressource",
     "cancel": "Annuler",
-    "saveAndClose": "Sauvegarder et fermer",
     "onSave.success": "Les enregistrements d'inventaire / de catalogue ont été créés avec succès",
     "onSave.error": "La sauvegarde des enregistrements d'inventaire a échoué",
     "addContributor": "Ajouter un contributeur",
