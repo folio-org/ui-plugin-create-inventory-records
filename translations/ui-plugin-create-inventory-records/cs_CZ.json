@@ -12,7 +12,6 @@
     "selectResourceType": "Vyberte typ zdroje",
     "resourceType": "Typ zdroje",
     "cancel": "Zrušit",
-    "saveAndClose": "Uložit a zavřít",
     "onSave.success": "Záznamy katalogu byly úspěšně vytvořeny",
     "onSave.error": "Uložení záznamů katalogu se nezdařilo",
     "addContributor": "Přidat autora",

@@ -12,7 +12,6 @@
     "selectResourceType": "Select resource type",
     "resourceType": "Resource type",
     "cancel": "Cancel",
-    "saveAndClose": "Save and close",
     "onSave.success": "Los registros de inventario se han creado con éxito",
     "onSave.error": "No se pudieron guardar los registros de inventario",
     "addContributor": "Add contributor",

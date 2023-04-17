@@ -12,7 +12,6 @@
     "selectResourceType": "Wybierz typ zasobu",
     "resourceType": "Typ zasobu",
     "cancel": "Anuluj",
-    "saveAndClose": "Zapisz i zamknij",
     "onSave.success": "Rekordy inwentarza zostały pomyślnie utworzone",
     "onSave.error": "Zapisywanie rekordów inwentarza nie powiodło się",
     "addContributor": "Dodaj współtwórcę",

@@ -12,7 +12,6 @@
     "selectResourceType": "Ressourcentyp auswählen",
     "resourceType": "Ressourcentyp",
     "cancel": "Abbrechen",
-    "saveAndClose": "Speichern und schließen",
     "onSave.success": "Katalogsätze wurden erfolgreich erstellt",
     "onSave.error": "Speichern des Katalogsatzes fehlgeschlagen",
     "addContributor": "Mitwirkende/-n hinzufügen",

@@ -12,7 +12,6 @@
     "selectResourceType": "选择资源类型",
     "resourceType": "资源类型",
     "cancel": "取消",
-    "saveAndClose": "保存并关闭",
     "onSave.success": "典藏记录已成功创建",
     "onSave.error": "保存典藏记录失败",
     "addContributor": "添加贡献者",

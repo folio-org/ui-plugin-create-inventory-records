@@ -12,7 +12,6 @@
     "selectResourceType": "Seleccionar tipo de recurso.",
     "resourceType": "Tipo de Recurso.",
     "cancel": "Cancelar",
-    "saveAndClose": "Guardar y cerrar.",
     "onSave.success": "Los registros de inventario se han creado correctamente",
     "onSave.error": "No se pudieron guardar los registros de inventario",
     "addContributor": "Agregar colaborador.",
