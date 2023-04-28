@@ -2,7 +2,7 @@
     "meta.title": "Crear registros de inventario (plugin)",
     "fastAddLabel": "Agregar nuevo registro rápido.",
     "instanceRecord": "Instancia",
-    "discoverySuppress": "Suprimir del descubrimiento",
+    "discoverySuppress": "Ocultar en el EDS",
     "instanceStatusTerm": "Término del estado de la instancia",
     "instanceStatusTerm.uncataloged": "Sin catalogar.",
     "resourceTitle": "Título del recurso.",
