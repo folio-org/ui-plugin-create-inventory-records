@@ -103,19 +103,18 @@ const CreateRecordsWrapper = ({
   if (isLoading) return null;
 
   return (
-    <Paneset>
-      <Layer
-        isOpen
-        inRootSet
-        contentLabel={intl.formatMessage({ id: 'ui-plugin-create-inventory-records.fastAddLabel' })}
-      >
-        <CreateRecordsForm
-          onSubmit={handleSubmit}
-          onClose={onClose}
-          initialValues={config}
-        />
-      </Layer>
-    </Paneset>
+    <Layer
+      isOpen
+      inRootSet
+      contentLabel={intl.formatMessage({ id: 'ui-plugin-create-inventory-records.fastAddLabel' })}
+      autoFocus
+    >
+      <CreateRecordsForm
+        onSubmit={handleSubmit}
+        onClose={onClose}
+        initialValues={config}
+      />
+    </Layer>
   );
 };
 
