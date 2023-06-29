@@ -1,5 +1,5 @@
 {
-    "meta.title": "Katalogsatz erstellen (plugin)",
+    "meta.title": "Katalogdatensatz erstellen (plugin)",
     "fastAddLabel": "Neue Kurzaufnahme",
     "instanceRecord": "Instanz",
     "discoverySuppress": "Nachweis unterdrückt",
@@ -19,7 +19,7 @@
     "contributors.name": "Name",
     "contributors.nameType": "Namenstyp",
     "contributors.primary": "Primär",
-    "contributors.makePrimary": "Zum 1. geistigen Schöpfer machen",
+    "contributors.makePrimary": "Zu 1. geistigen Schöpfer/-in machen",
     "contributors.selectType": "Typ auswählen",
     "selectToContinue": "Bitte auswählen, um fortzufahren",
     "fillIn": "Bitte ausfüllen, um fortzufahren",
