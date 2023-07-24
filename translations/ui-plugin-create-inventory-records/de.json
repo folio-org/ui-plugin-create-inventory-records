@@ -50,8 +50,8 @@
     "circulationNotes.noteType": "Anmerkungstyp",
     "circulationNotes.name": "Anmerkung",
     "circulationNotes.staffOnly": "Nur Personal",
-    "circulationNotes.checkInNote": "Rückgabebeleg",
-    "circulationNotes.checkOutNote": "Rückgabenotiz",
+    "circulationNotes.checkInNote": "Rückgabeanmerkung",
+    "circulationNotes.checkOutNote": "Ausleihanmerkung",
     "selectInstanceStatus": "Instanzstatus auswählen",
     "permission.create": "Kurzaufnahme: Erstellen",
     "barcodeTaken": "Dieser Barcode ist bereits vergeben"
