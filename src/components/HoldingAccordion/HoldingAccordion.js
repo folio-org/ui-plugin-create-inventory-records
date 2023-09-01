@@ -16,13 +16,15 @@ import {
   LocationLookup,
 } from '@folio/stripes/smart-components';
 
+import { NumberGeneratorModalButton } from '@folio/service-interaction';
+
 import {
   useData,
   useOptions,
 } from '../../hooks';
 
 const HoldingAccordion = ({ change }) => {
-  const { callNumberTypes } = useData();
+  const { callNumberTypes, settings: { callNumberGeneratorSettingHoldings } } = useData();
   const callNumberTypeOptions = useOptions(callNumberTypes, 'id', 'name');
   const { formatMessage } = useIntl();
 
@@ -90,13 +92,35 @@ const HoldingAccordion = ({ change }) => {
           />
         </Col>
         <Col sm={3}>
-          <Field
-            label={<FormattedMessage id="ui-plugin-create-inventory-records.callNumber" />}
-            name="holding.callNumber"
-            id="call_number"
-            component={TextField}
-            fullWidth
-          />
+          <Row>
+            <Field
+              label={<FormattedMessage id="ui-plugin-create-inventory-records.callNumber" />}
+              name="holding.callNumber"
+              id="call_number"
+              component={TextField}
+              fullWidth
+            />
+          </Row>
+          <Row>
+            {(
+              callNumberGeneratorSettingHoldings === 'useGenerator' ||
+              callNumberGeneratorSettingHoldings === 'useBoth'
+            ) &&
+              <Col xs={12}>
+                <NumberGeneratorModalButton
+                  buttonLabel={<FormattedMessage id="ui-inventory.numberGenerator.generateCallNumber" />}
+                  callback={(generated) => change('holding.callNumber', generated)}
+                  fullWidth
+                  id="inventoryCallNumber"
+                  generateButtonLabel={<FormattedMessage id="ui-inventory.numberGenerator.generateCallNumber" />}
+                  generator="inventory_callNumber"
+                  modalProps={{
+                    label: <FormattedMessage id="ui-inventory.numberGenerator.callNumberGenerator" />
+                  }}
+                />
+              </Col>
+            }
+          </Row>
         </Col>
         <Col sm={3}>
           <Field

@@ -30,22 +30,28 @@ const DataProvider = ({
     });
 
     const { instanceStatuses, configs } = loadedData;
-    const value = configs[0]?.value || '';
-    let config;
+    const fastAddValue = configs?.find(c => c.module === 'FAST_ADD')?.value || '';
+    const inventoryValue = configs?.find(c => c.module === 'INVENTORY')?.value || '';
+    let settings;
 
     try {
-      const { instanceStatusCode, defaultDiscoverySuppress } = JSON.parse(value);
+      // Fast add settings
+      const { instanceStatusCode, defaultDiscoverySuppress } = JSON.parse(fastAddValue);
       const discoverySuppress = JSON.parse(defaultDiscoverySuppress);
       const statusId = (instanceStatuses.find(status => status.code === instanceStatusCode) || {}).id || '';
 
-      config = {
+      // Inventory settings
+      const { callNumberGeneratorSettingHoldings } = JSON.parse(inventoryValue);
+
+      settings = {
+        callNumberGeneratorSettingHoldings,
         discoverySuppress,
         statusId,
       };
     } catch (error) {
-      config = {};
+      settings = {};
     }
-    loadedData.settings = config;
+    loadedData.settings = settings;
     loadedData.identifierTypesByName = keyBy(loadedData.identifierTypes, 'name');
     loadedData.holdingsSourcesByName = keyBy(loadedData.holdingsSources, 'name');
 
@@ -83,7 +89,7 @@ DataProvider.manifest = Object.freeze({
   configs: {
     type: 'okapi',
     records: 'configs',
-    path: 'configurations/entries?query=(module==FAST_ADD and configName==fastAddSettings)',
+    path: 'configurations/entries?query=((module==FAST_ADD and configName==fastAddSettings) or (module==INVENTORY and configName==number_generator))',
   },
   identifierTypes: {
     type: 'okapi',
