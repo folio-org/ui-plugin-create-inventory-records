@@ -24,7 +24,7 @@ import {
 } from '../../hooks';
 
 const HoldingAccordion = ({ change }) => {
-  const { callNumberTypes, settings: { callNumberGeneratorSettingHoldings } } = useData();
+  const { callNumberTypes, settings: { numberGeneratorSettings: { callNumberGeneratorSettingHoldings } = {} } = {} } = useData();
   const callNumberTypeOptions = useOptions(callNumberTypes, 'id', 'name');
   const { formatMessage } = useIntl();
 

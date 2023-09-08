@@ -30,22 +30,22 @@ const DataProvider = ({
     });
 
     const { instanceStatuses, configs } = loadedData;
-    const fastAddValue = configs?.find(c => c.module === 'FAST_ADD')?.value || '';
-    const inventoryValue = configs?.find(c => c.module === 'INVENTORY')?.value || '';
+    const fastAddValue = configs?.find(c => c.module === 'FAST_ADD')?.value || '{}';
+    const inventoryValue = configs?.find(c => c.module === 'INVENTORY')?.value || '{}';
     let settings;
 
     try {
       // Fast add settings
-      const { instanceStatusCode, defaultDiscoverySuppress } = JSON.parse(fastAddValue);
+      const { instanceStatusCode, defaultDiscoverySuppress = '{}' } = JSON.parse(fastAddValue);
       const discoverySuppress = JSON.parse(defaultDiscoverySuppress);
       const statusId = (instanceStatuses.find(status => status.code === instanceStatusCode) || {}).id || '';
 
       // Inventory settings
-      const { callNumberGeneratorSettingHoldings } = JSON.parse(inventoryValue);
+      const numberGeneratorSettings = JSON.parse(inventoryValue);
 
       settings = {
-        callNumberGeneratorSettingHoldings,
         discoverySuppress,
+        numberGeneratorSettings,
         statusId,
       };
     } catch (error) {
