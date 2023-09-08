@@ -112,12 +112,14 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "",
+    "test:unit": "jest --ci --coverage",
+    "test": "yarn run test:unit",
     "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
     "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-plugin-create-inventory-records ./translations/ui-plugin-create-inventory-records/compiled"
   },
   "devDependencies": {
     "@folio/eslint-config-stripes": "^7.0.0",
+    "@folio/jest-config-stripes": "^2.0.0",
     "@folio/stripes": "^9.0.0",
     "@folio/stripes-cli": "^3.0.0",
     "@folio/stripes-components": "^12.0.0",
