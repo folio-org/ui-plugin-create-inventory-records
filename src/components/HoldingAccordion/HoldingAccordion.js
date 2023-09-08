@@ -16,15 +16,13 @@ import {
   LocationLookup,
 } from '@folio/stripes/smart-components';
 
-import { NumberGeneratorModalButton } from '@folio/service-interaction';
-
 import {
   useData,
   useOptions,
 } from '../../hooks';
 
 const HoldingAccordion = ({ change }) => {
-  const { callNumberTypes, settings: { numberGeneratorSettings: { callNumberGeneratorSettingHoldings } = {} } = {} } = useData();
+  const { callNumberTypes } = useData();
   const callNumberTypeOptions = useOptions(callNumberTypes, 'id', 'name');
   const { formatMessage } = useIntl();
 
@@ -92,35 +90,13 @@ const HoldingAccordion = ({ change }) => {
           />
         </Col>
         <Col sm={3}>
-          <Row>
-            <Field
-              label={<FormattedMessage id="ui-plugin-create-inventory-records.callNumber" />}
-              name="holding.callNumber"
-              id="call_number"
-              component={TextField}
-              fullWidth
-            />
-          </Row>
-          <Row>
-            {(
-              callNumberGeneratorSettingHoldings === 'useGenerator' ||
-              callNumberGeneratorSettingHoldings === 'useBoth'
-            ) &&
-              <Col xs={12}>
-                <NumberGeneratorModalButton
-                  buttonLabel={<FormattedMessage id="ui-inventory.numberGenerator.generateCallNumber" />}
-                  callback={(generated) => change('holding.callNumber', generated)}
-                  fullWidth
-                  id="inventoryCallNumber"
-                  generateButtonLabel={<FormattedMessage id="ui-inventory.numberGenerator.generateCallNumber" />}
-                  generator="inventory_callNumber"
-                  modalProps={{
-                    label: <FormattedMessage id="ui-inventory.numberGenerator.callNumberGenerator" />
-                  }}
-                />
-              </Col>
-            }
-          </Row>
+          <Field
+            label={<FormattedMessage id="ui-plugin-create-inventory-records.callNumber" />}
+            name="holding.callNumber"
+            id="call_number"
+            component={TextField}
+            fullWidth
+          />
         </Col>
         <Col sm={3}>
           <Field
