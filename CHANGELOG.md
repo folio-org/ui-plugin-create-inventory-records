@@ -1,8 +1,11 @@
 # Change history for ui-plugin-create-inventory-records
 
-## 3.4.0 IN PROGRESS
+## 4.0.0 IN PROGRESS
 * To support UX consistency, the translation key from the stripes components for the save and close button is now used. Fixes UIPCIR-52.
 * Also support `circulation` `14.0`. Refs UIPCIR-53.
+* *BREAKING* bump `react` to `v18`, and dev-deps accordingly (UIPCIR-55)
+* Update Node.js to v18 in GitHub Actions (UIPCIR-56)
+* Setup Jest for unit testing (UIPCIR-57)
 
 ## [3.3.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.3.0) (2023-02-20)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.2.0...v3.3.0)
