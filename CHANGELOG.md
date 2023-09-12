@@ -6,6 +6,7 @@
 * *BREAKING* bump `react` to `v18`, and dev-deps accordingly (UIPCIR-55)
 * Update Node.js to v18 in GitHub Actions (UIPCIR-56)
 * Setup Jest for unit testing (UIPCIR-57)
+* *BREAKING* bump `react-intl` to `v6.4.4`. Refs UIPCIR-58
 
 ## [3.3.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.3.0) (2023-02-20)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.2.0...v3.3.0)
