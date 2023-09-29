@@ -50,6 +50,7 @@ const ItemAccordion = ({ change }) => {
         <Col sm={4}>
           <Row>
             <Field
+              disabled={barcodeGeneratorSettingItems === 'useGenerator'}
               label={<FormattedMessage id="ui-plugin-create-inventory-records.barcode" />}
               name="item.barcode"
               id="barcode"
@@ -67,7 +68,6 @@ const ItemAccordion = ({ change }) => {
                 <NumberGeneratorModalButton
                   buttonLabel={<FormattedMessage id="ui-inventory.numberGenerator.generateItemBarcode" />}
                   callback={(generated) => change('item.barcode', generated)}
-                  fullWidth
                   id="inventoryItemBarcode"
                   generateButtonLabel={<FormattedMessage id="ui-inventory.numberGenerator.generateItemBarcode" />}
                   generator="inventory_itemBarcode"
