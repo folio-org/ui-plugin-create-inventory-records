@@ -1,9 +1,18 @@
 # Change history for ui-plugin-create-inventory-records
 
-## 3.4.0 IN PROGRESS
+## 4.1.0 IN PROGRESS
+
+* Correctly handle optional `x-okapi-token` request header. Fixes UIPCIR-61.
+
+## [4.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v4.0.0) (2023-10-12)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.3.0...v4.0.0)
+
 * To support UX consistency, the translation key from the stripes components for the save and close button is now used. Fixes UIPCIR-52.
 * Also support `circulation` `14.0`. Refs UIPCIR-53.
-* Correctly handle optional `x-okapi-token` request header. Fixes UIPCIR-61.
+* *BREAKING* bump `react` to `v18`, and dev-deps accordingly (UIPCIR-55)
+* Update Node.js to v18 in GitHub Actions (UIPCIR-56)
+* Setup Jest for unit testing (UIPCIR-57)
+* *BREAKING* bump `react-intl` to `v6.4.4`. Refs UIPCIR-58
 
 ## [3.3.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v3.3.0) (2023-02-20)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.2.0...v3.3.0)
