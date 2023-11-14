@@ -18,6 +18,7 @@ const CreateRecordsPlugin = ({
   onOpen,
   onClose,
   renderTrigger,
+  renderInPaneset,
 }) => {
   const [isModalOpen, toggleModal] = useState(false);
 
@@ -61,7 +62,10 @@ const CreateRecordsPlugin = ({
       }
       {isModalOpen &&
         <DataProvider>
-          <CreateRecordsWrapper onClose={closeModal} />
+          <CreateRecordsWrapper
+            onClose={closeModal}
+            renderInPaneset={renderInPaneset}
+          />
         </DataProvider>
       }
     </IfPermission>
@@ -70,6 +74,7 @@ const CreateRecordsPlugin = ({
 
 CreateRecordsPlugin.defaultProps = {
   open: false,
+  renderInPaneset: true,
 };
 
 CreateRecordsPlugin.propTypes = {
@@ -78,6 +83,7 @@ CreateRecordsPlugin.propTypes = {
   onOpen: PropTypes.func,
   onClose: PropTypes.func,
   renderTrigger: PropTypes.func,
+  renderInPaneset: PropTypes.bool,
 };
 
 export default CreateRecordsPlugin;

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import {
   FormattedMessage,
@@ -45,6 +45,7 @@ const CreateRecordsWrapper = ({
     createHoldingsRecord,
     createItemRecord,
   },
+  renderInPaneset,
 }) => {
   const {
     identifierTypesByName,
@@ -55,13 +56,13 @@ const CreateRecordsWrapper = ({
   const isLoading = useIsLoading();
   const intl = useIntl();
 
-  const config = {
+  const config = useMemo(() => ({
     ...initialValues,
     instance: {
       ...initialValues.instance,
       ...settings,
     },
-  };
+  }), [settings]);
 
   const handleSubmit = useCallback(async (formData) => {
     const {
@@ -100,28 +101,37 @@ const CreateRecordsWrapper = ({
     holdingsSourcesByName,
   ]);
 
+  const renderLayer = useCallback(() => ((
+    <Layer
+      isOpen
+      inRootSet
+      contentLabel={intl.formatMessage({ id: 'ui-plugin-create-inventory-records.fastAddLabel' })}
+    >
+      <CreateRecordsForm
+        onSubmit={handleSubmit}
+        onClose={onClose}
+        initialValues={config}
+      />
+    </Layer>
+  )), [config, handleSubmit, intl, onClose]);
+
   if (isLoading) return null;
 
-  return (
-    <Paneset>
-      <Layer
-        isOpen
-        inRootSet
-        contentLabel={intl.formatMessage({ id: 'ui-plugin-create-inventory-records.fastAddLabel' })}
-      >
-        <CreateRecordsForm
-          onSubmit={handleSubmit}
-          onClose={onClose}
-          initialValues={config}
-        />
-      </Layer>
-    </Paneset>
-  );
+  if (renderInPaneset) {
+    return (
+      <Paneset>
+        {renderLayer()}
+      </Paneset>
+    );
+  }
+
+  return renderLayer();
 };
 
 CreateRecordsWrapper.propTypes = {
   onClose: PropTypes.func.isRequired,
   mutator: PropTypes.object.isRequired,
+  renderInPaneset: PropTypes.bool,
 };
 
 CreateRecordsWrapper.manifest = Object.freeze({
