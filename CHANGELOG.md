@@ -3,6 +3,7 @@
 ## 4.1.0 IN PROGRESS
 
 * Correctly handle optional `x-okapi-token` request header. Fixes UIPCIR-61.
+* Remove not needed Paneset to correctly calculate pane widths when closing plugin. Fixes UIPCIR-78.
 
 ## [4.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v4.0.0) (2023-10-12)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.3.0...v4.0.0)
