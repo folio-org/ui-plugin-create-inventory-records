@@ -211,8 +211,8 @@ function checkUniqueBarcode(okapi, barcode) {
     {
       headers: {
         'X-Okapi-Tenant': tenant,
-        'X-Okapi-Token': token,
         'Content-Type': 'application/json',
+        ...(token && { 'X-Okapi-Token': token }),
       },
     });
 }
