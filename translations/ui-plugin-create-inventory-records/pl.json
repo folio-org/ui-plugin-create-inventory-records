@@ -1,7 +1,7 @@
 {
     "meta.title": "Tworzenie rekordów inwentarza (wtyczka)",
     "fastAddLabel": "Nowy rekord szybkiego dodawania",
-    "instanceRecord": "Instancja",
+    "instanceRecord": "Opiu bibliograficznego",
     "discoverySuppress": "Ukryj w narzędziach wyszukiwania",
     "instanceStatusTerm": "Określenie statusu instancji",
     "instanceStatusTerm.uncataloged": "Nieskatalogowane (UC: uc)",
