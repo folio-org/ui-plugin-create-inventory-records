@@ -54,5 +54,5 @@
     "circulationNotes.checkOutNote": "Uwaga do wypożyczenia",
     "selectInstanceStatus": "Wybierz status instancji",
     "permission.create": "Szybkie dodawanie: Utwórz",
-    "barcodeTaken": "This barcode has already been taken"
+    "barcodeTaken": "Ten kod kreskowy jest już wykorzystany w systemie"
 }
