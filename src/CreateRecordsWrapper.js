@@ -78,6 +78,7 @@ const CreateRecordsWrapper = ({
 
       callout.sendCallout({
         message: <FormattedMessage id="ui-plugin-create-inventory-records.onSave.success" />,
+        type: 'success',
       });
 
       onClose({
