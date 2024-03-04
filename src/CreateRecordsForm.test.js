@@ -1,14 +1,18 @@
-import { fireEvent, waitFor } from '@folio/jest-config-stripes/testing-library/react';
+import { noop } from 'lodash';
+import {
+  fireEvent,
+  waitFor,
+} from '@folio/jest-config-stripes/testing-library/react';
+
 import {
   renderWithIntl,
   renderWithRouter,
   translationsProperties,
+  renderWithFinalForm,
 } from '../test/jest/helpers';
 
-import CreateRecordsForm from './CreateRecordsForm';
-import { noop } from 'lodash';
-import renderWithFinalForm from '../test/jest/helpers/renderWithFinalForm';
 import { HoldingAccordion } from './components';
+import CreateRecordsForm from './CreateRecordsForm';
 
 jest.mock('./components', () => ({
   ...jest.requireActual('./components'),

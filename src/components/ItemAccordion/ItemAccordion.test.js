@@ -5,10 +5,10 @@ import {
   renderWithIntl,
   renderWithRouter,
   translationsProperties,
+  renderWithFinalForm,
 } from '../../../test/jest/helpers';
 
 import ItemAccordion from './ItemAccordion';
-import renderWithFinalForm from '../../../test/jest/helpers/renderWithFinalForm';
 
 jest.mock('../../hooks', () => ({
   ...jest.requireActual('../../hooks'),

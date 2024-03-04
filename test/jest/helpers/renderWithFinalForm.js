@@ -2,7 +2,7 @@ import React from 'react';
 
 import stripesFinalForm from '@folio/stripes/final-form';
 
-const renderWithFinalForm = (
+export const renderWithFinalForm = (
   component,
   {
     onSubmit: onCustomSubmit,
@@ -33,5 +33,3 @@ const renderWithFinalForm = (
     />
   );
 };
-
-export default renderWithFinalForm;
