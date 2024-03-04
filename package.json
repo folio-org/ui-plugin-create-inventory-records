@@ -46,6 +46,9 @@
       "location-units": "2.0",
       "circulation": "9.0 10.0 11.0 12.0 13.0 14.0"
     },
+    "optionalOkapiInterfaces": {
+      "servint": "2.0 3.0"
+    },
     "permissionSets": [
       {
         "permissionName": "module.ui-plugin-create-inventory-records.enabled",
@@ -120,6 +123,7 @@
   "devDependencies": {
     "@folio/eslint-config-stripes": "^7.0.0",
     "@folio/jest-config-stripes": "^2.0.0",
+    "@folio/service-interaction": "^2.0.0",
     "@folio/stripes": "^9.0.0",
     "@folio/stripes-cli": "^3.0.0",
     "@folio/stripes-components": "^12.0.0",
@@ -143,6 +147,7 @@
     "react-final-form-listeners": "^1.0.2"
   },
   "peerDependencies": {
+    "@folio/service-interaction": "^2.0.0",
     "@folio/stripes": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
