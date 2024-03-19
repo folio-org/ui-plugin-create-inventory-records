@@ -9,6 +9,7 @@
 * Jest/RTL: Cover `CreateRecordsForm` component with unit tests. Refs UIPCIR-66.
 * Jest/RTL: Cover `CreateRecordsPlugin` component with unit tests. Refs UIPCIR-65.
 * Jest/RTL: Cover util.js with unit tests. Refs UIPCIR-63.
+* Jest/RTL: Cover `PrimaryToggleButton` component with unit tests. Refs UIPCIR-72.
 
 ## [4.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v4.0.0) (2023-10-12)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v3.3.0...v4.0.0)
