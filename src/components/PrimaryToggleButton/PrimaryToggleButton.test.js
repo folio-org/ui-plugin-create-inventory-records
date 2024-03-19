@@ -40,6 +40,11 @@ const renderPrimaryToggleButton = props => {
 };
 
 describe('PrimaryToggleButton component', () => {
+  beforeEach(() => {
+    onChangeMock.mockClear();
+    defaultProps.input.onChange.mockClear();
+  });
+
   it('should be rendered with the label', () => {
     const {
       getByText,
