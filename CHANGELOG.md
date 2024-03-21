@@ -1,6 +1,7 @@
 # Change history for ui-plugin-create-inventory-records
 
-## 4.1.0 IN PROGRESS
+## [4.1.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v4.1.0) (2024-03-21)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v4.0.0...v4.1.0)
 
 * Correctly handle optional `x-okapi-token` request header. Fixes UIPCIR-61.
 * Remove not needed Paneset to correctly calculate pane widths when closing plugin. Fixes UIPCIR-78.
