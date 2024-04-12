@@ -2,7 +2,7 @@
     "meta.title": "Criar registros de inventário (plug-in)",
     "fastAddLabel": "Novo registro de adição rápida",
     "instanceRecord": "Instância",
-    "discoverySuppress": "Ocultar na ferramenta de descoberta",
+    "discoverySuppress": "Ocultar da descoberta",
     "instanceStatusTerm": "Termo do status da instância",
     "instanceStatusTerm.uncataloged": "Não catalogado (UC: uc)",
     "resourceTitle": "Título do recurso",
