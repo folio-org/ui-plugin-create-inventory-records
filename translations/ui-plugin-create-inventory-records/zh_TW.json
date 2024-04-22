@@ -32,7 +32,7 @@
     "callNumber": "索書號",
     "callNumberSuffix": "索書號後綴",
     "selectType": "選擇類型",
-    "itemRecord": "單件",
+    "itemRecord": "館藏",
     "barcode": "條碼",
     "selectMaterialType": "選擇資料類型",
     "materialType": "資料類型",
