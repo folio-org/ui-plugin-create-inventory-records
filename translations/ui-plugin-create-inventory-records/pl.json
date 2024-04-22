@@ -19,7 +19,7 @@
     "contributors.name": "Nazwa",
     "contributors.nameType": "Typ nazwy",
     "contributors.primary": "Główny",
-    "contributors.makePrimary": "Ustal jako główny",
+    "contributors.makePrimary": "Ustaw jako główny",
     "contributors.selectType": "Wybierz rodzaj",
     "selectToContinue": "Proszę wybrać, aby kontynuować",
     "fillIn": "Proszę to wypełnić, aby kontynuować",
@@ -53,6 +53,6 @@
     "circulationNotes.checkInNote": "Uwaga do zwrotu",
     "circulationNotes.checkOutNote": "Uwaga do wypożyczenia",
     "selectInstanceStatus": "Wybierz status instancji",
-    "permission.create": "Szybkie dodawanie: Utwórz",
+    "permission.create": "Parametry rekordu skórconego: Utwórz",
     "barcodeTaken": "Ten kod kreskowy jest już wykorzystany w systemie"
 }
