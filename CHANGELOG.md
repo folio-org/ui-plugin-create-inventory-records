@@ -1,5 +1,9 @@
 # Change history for ui-plugin-create-inventory-records
 
+## 4.2.0 IN PROGRESS
+
+* Jest/RTL: Cover InstanceAccordion component with unit tests. Refs UIPCIR-73.
+
 ## [4.1.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v4.1.0) (2024-03-21)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v4.0.0...v4.1.0)
 
