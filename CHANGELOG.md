@@ -6,6 +6,7 @@
 * Jest/RTL: Cover `HoldingAccordion` component with unit tests. Refs UIPCIR-74.
 * Jest/RTL: Cover `InstanceAccordion` component with unit tests. Refs UIPCIR-73.
 * Jest/RTL: Cover `ElectronicAccessFields` component with unit tests. Refs UIPCIR-75.
+* Jest/RTL: Cover `useCallout` hook with unit tests. Refs UIPCIR-71.
 
 ## [4.1.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v4.1.0) (2024-03-21)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v4.0.0...v4.1.0)
