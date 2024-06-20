@@ -46,7 +46,7 @@
     "electronicAccess.materialsSpecification": "Materials specified",
     "electronicAccess.publicNote": "URL public note",
     "circulationNotes": "Item notes",
-    "addCirculationNote": "Add check in / check out note",
+    "addCirculationNote": "Lägg till återlämnings-/utlåningsanteckning",
     "circulationNotes.noteType": "Note type",
     "circulationNotes.name": "Note",
     "circulationNotes.staffOnly": "Staff only",
