@@ -49,7 +49,7 @@
     "addCirculationNote": "Agregar nota de devolución / préstamo",
     "circulationNotes.noteType": "Note type",
     "circulationNotes.name": "Note",
-    "circulationNotes.staffOnly": "Staff only",
+    "circulationNotes.staffOnly": "Ocultar personal",
     "circulationNotes.checkInNote": "Check in note",
     "circulationNotes.checkOutNote": "Nota de préstamo",
     "selectInstanceStatus": "Select instance status",
