@@ -1,5 +1,5 @@
 {
-    "meta.title": "Créer des enregistrements d'inventaire / de catalogue (plugin)",
+    "meta.title": "Créer des notices de catalogue (plugin)",
     "fastAddLabel": "Nouvel ajout rapide",
     "instanceRecord": "Instance",
     "discoverySuppress": "Supprimer de la *recherche*",
@@ -12,8 +12,8 @@
     "selectResourceType": "Sélectionner le type de ressource",
     "resourceType": "Type de ressource",
     "cancel": "Annuler",
-    "onSave.success": "Les enregistrements d'inventaire / de catalogue ont été créés avec succès",
-    "onSave.error": "La sauvegarde des enregistrements d'inventaire a échoué",
+    "onSave.success": "Les notices de catalogue ont été créés avec succès",
+    "onSave.error": "La sauvegarde des notices de catalogue a échoué",
     "addContributor": "Ajouter un contributeur",
     "contributors": "Contributeurs",
     "contributors.name": "Nom",
