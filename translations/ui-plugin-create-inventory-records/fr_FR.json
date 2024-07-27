@@ -2,8 +2,8 @@
     "meta.title": "Créer des notices de catalogue (plugin)",
     "fastAddLabel": "Nouvel ajout rapide",
     "instanceRecord": "Instance",
-    "discoverySuppress": "Supprimer de la *recherche*",
-    "instanceStatusTerm": "Terme du statut d'instance",
+    "discoverySuppress": "Masquer dans l'outil de découverte",
+    "instanceStatusTerm": "Termes du statut de notice bibliographique",
     "instanceStatusTerm.uncataloged": "Uncataloged (UC: uc)",
     "resourceTitle": "Titre de la ressource",
     "publicationDate": "Date de publication",
@@ -52,7 +52,7 @@
     "circulationNotes.staffOnly": "Pour le personnel uniquement",
     "circulationNotes.checkInNote": "Note de retour",
     "circulationNotes.checkOutNote": "Note d'emprunt",
-    "selectInstanceStatus": "Sélectionnez le statut de l'instance",
+    "selectInstanceStatus": "Sélectionnez le statut de notice bibliographique",
     "permission.create": "Ajout rapide: créer",
     "barcodeTaken": "Ce code-barres a déjà été pris"
 }
