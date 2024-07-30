@@ -1,5 +1,5 @@
 {
-    "meta.title": "建立典藏記錄（外掛程式）",
+    "meta.title": "建立館藏庫記錄（外掛程式）",
     "fastAddLabel": "快速新增記錄",
     "instanceRecord": "實例",
     "discoverySuppress": "在探索服務中隱藏",
@@ -12,8 +12,8 @@
     "selectResourceType": "選擇資源類型",
     "resourceType": "資源類型",
     "cancel": "取消",
-    "onSave.success": "典藏記錄已建立成功",
-    "onSave.error": "儲存典藏記錄失敗",
+    "onSave.success": "館藏庫記錄已建立成功",
+    "onSave.error": "儲存館藏庫記錄失敗",
     "addContributor": "新增貢獻者",
     "contributors": "貢獻者",
     "contributors.name": "名稱",
