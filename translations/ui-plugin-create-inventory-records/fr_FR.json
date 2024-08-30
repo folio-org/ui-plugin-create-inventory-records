@@ -46,7 +46,7 @@
     "electronicAccess.materialsSpecification": "Matériels spécifiés",
     "electronicAccess.publicNote": "Note publique sur l'URL",
     "circulationNotes": "Notes  sur l'exemplaire",
-    "addCirculationNote": "Ajouter une note pour le retour / l'emprunt",
+    "addCirculationNote": "Ajouter une note pour le retour/l'emprunt",
     "circulationNotes.noteType": "Type de note",
     "circulationNotes.name": "Note",
     "circulationNotes.staffOnly": "Pour le personnel uniquement",
