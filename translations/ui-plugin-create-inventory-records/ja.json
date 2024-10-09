@@ -16,7 +16,7 @@
     "onSave.error": "インベントリレコードの保存に失敗しました",
     "addContributor": "寄与者を追加",
     "contributors": "寄与者",
-    "contributors.name": "名前",
+    "contributors.name": "名称",
     "contributors.nameType": "名称タイプ",
     "contributors.primary": "プライマリ",
     "contributors.makePrimary": "プライマリにする",
