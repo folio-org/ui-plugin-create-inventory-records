@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-create-inventory-records",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "Create inventory records for Stripes",
   "repository": "folio-org/ui-plugin-create-inventory-records",
   "publishConfig": {
