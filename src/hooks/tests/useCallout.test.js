@@ -6,7 +6,9 @@ import { CalloutContext } from '@folio/stripes/core';
 import useCallout from '../useCallout';
 
 const wrapper = ({ children }) => (
-  <CalloutContext.Provider value={{ sendCallout: new Function() }}>{children}</CalloutContext.Provider>
+  <CalloutContext.Provider value={{ sendCallout: new Function() }}>
+    {children}
+  </CalloutContext.Provider>
 );
 
 describe('useCallout hook', () => {

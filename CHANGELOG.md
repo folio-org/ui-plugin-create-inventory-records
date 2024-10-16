@@ -8,6 +8,11 @@
 * Jest/RTL: Cover `ElectronicAccessFields` component with unit tests. Refs UIPCIR-75.
 * Jest/RTL: Cover `useCallout` hook with unit tests. Refs UIPCIR-71.
 * "holdings-storage" API version update. Refs UIPCIR-82.
+* Jest/RTL: Cover `useData` hook with unit tests. Refs UIPCIR-70.
+* Jest/RTL: Cover `DataProvider` component with unit tests. Refs UIPCIR-67.
+* Update `actions/upload-artifact@v2` to `actions/upload-artifact@v4`. Refs UIPCIR-87.
+* Also support `inventory` `v14.0`. Refs UIPCIR-85.
+* Also support `instance-storage` `11.0`. Refs UIPCIR-86.
 * Remove bigtest from github workflows. Refs UIPCIR-91.
 
 ## [4.1.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v4.1.0) (2024-03-21)

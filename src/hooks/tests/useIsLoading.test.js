@@ -1,10 +1,12 @@
 import { renderHook } from '@folio/jest-config-stripes/testing-library/react';
 
-import { DataContext  } from '../../contexts';
+import { DataContext } from '../../contexts';
 import useIsLoading from '../useIsLoading';
 
 const wrapper = ({ children }) => (
-  <DataContext.Provider value={{ isLoading: () => false }}>{children}</DataContext.Provider>
+  <DataContext.Provider value={{ isLoading: () => false }}>
+    {children}
+  </DataContext.Provider>
 );
 
 describe('useIsLoading hook', () => {
