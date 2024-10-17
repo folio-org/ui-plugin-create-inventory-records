@@ -13,6 +13,8 @@
 * Update `actions/upload-artifact@v2` to `actions/upload-artifact@v4`. Refs UIPCIR-87.
 * Also support `inventory` `v14.0`. Refs UIPCIR-85.
 * Also support `instance-storage` `11.0`. Refs UIPCIR-86.
+* Remove bigtest from github workflows. Refs UIPCIR-91.
+* Support `holdings-storage` `8.0`. Refs UIPCIR-83.
 * Bump `stripes` to `v9.2.0` for Ramsons release. Refs UIPCIR-89.
 
 ## [4.1.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v4.1.0) (2024-03-21)
