@@ -1,6 +1,6 @@
 # Change history for ui-plugin-create-inventory-records
 
-## [4.2.0] (IN PROGRESS)
+## [5.0.0] (IN PROGRESS)
 
 * Jest/RTL: Cover `useIsLoading` hook with unit tests. Refs UIPCIR-69.
 * Jest/RTL: Cover `HoldingAccordion` component with unit tests. Refs UIPCIR-74.
@@ -15,6 +15,7 @@
 * Also support `instance-storage` `11.0`. Refs UIPCIR-86.
 * Remove bigtest from github workflows. Refs UIPCIR-91.
 * Support `holdings-storage` `8.0`. Refs UIPCIR-83.
+* *BREAKING* Bump `stripes` to `v9.2.0` for Ramsons release. Refs UIPCIR-89.
 
 ## [4.1.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v4.1.0) (2024-03-21)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v4.0.0...v4.1.0)

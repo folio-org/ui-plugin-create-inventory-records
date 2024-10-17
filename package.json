@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-create-inventory-records",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "Create inventory records for Stripes",
   "repository": "folio-org/ui-plugin-create-inventory-records",
   "publishConfig": {
@@ -120,10 +120,10 @@
   "devDependencies": {
     "@folio/eslint-config-stripes": "^7.0.0",
     "@folio/jest-config-stripes": "^2.0.0",
-    "@folio/stripes": "^9.0.0",
-    "@folio/stripes-cli": "^3.0.0",
-    "@folio/stripes-components": "^12.0.0",
-    "@folio/stripes-core": "^10.0.0",
+    "@folio/stripes": "^9.2.0",
+    "@folio/stripes-cli": "^3.2.0",
+    "@folio/stripes-components": "^12.2.0",
+    "@folio/stripes-core": "^10.2.0",
     "@formatjs/cli": "^6.1.3",
     "core-js": "^3.6.4",
     "react": "^18.2.0",
@@ -143,7 +143,7 @@
     "react-final-form-listeners": "^1.0.2"
   },
   "peerDependencies": {
-    "@folio/stripes": "^9.0.0",
+    "@folio/stripes": "^9.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intl": "^6.4.4",
