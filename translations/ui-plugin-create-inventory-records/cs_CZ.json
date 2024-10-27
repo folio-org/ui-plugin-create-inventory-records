@@ -2,7 +2,7 @@
     "meta.title": "Vytvořit záznamy katalogu (plugin)",
     "fastAddLabel": "Nový záznam rychlého přidání",
     "instanceRecord": "Titul",
-    "discoverySuppress": "Potlačit z vyhledávání",
+    "discoverySuppress": "Vyřadit z vyhledávání",
     "instanceStatusTerm": "Termín stavu titulu",
     "instanceStatusTerm.uncataloged": "Nekatalogizováno (UC: uc)",
     "resourceTitle": "Název zdroje",
