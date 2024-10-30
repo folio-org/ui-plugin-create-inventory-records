@@ -1,6 +1,7 @@
 # Change history for ui-plugin-create-inventory-records
 
-## [5.0.0] (IN PROGRESS)
+## [5.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v5.0.0) (2024-10-30)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v4.1.0...v5.0.0)
 
 * Jest/RTL: Cover `useIsLoading` hook with unit tests. Refs UIPCIR-69.
 * Jest/RTL: Cover `HoldingAccordion` component with unit tests. Refs UIPCIR-74.
