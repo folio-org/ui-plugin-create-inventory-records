@@ -2,6 +2,7 @@ import {
   fireEvent,
   screen,
 } from '@folio/jest-config-stripes/testing-library/react';
+import { runAxeTest } from '@folio/stripes-testing';
 
 import {
   renderWithIntl,
@@ -26,6 +27,12 @@ const renderContributorFields = () => {
 };
 
 describe('ContributorFields component', () => {
+  it('should be rendered with no axe errors', async () => {
+    const { container } = renderContributorFields();
+
+    await runAxeTest({ rootNode: container });
+  });
+
   it('should render "Add contributor" button', () => {
     renderContributorFields();
 
@@ -33,6 +40,14 @@ describe('ContributorFields component', () => {
   });
 
   describe('when click "Add contributor" button', () => {
+    it('should render fields with no axe errors', async () => {
+      const { container } = renderContributorFields();
+
+      fireEvent.click(screen.getByRole('button', { name: /add contributor/i }));
+  
+      await runAxeTest({ rootNode: container });
+    });
+
     it('should render correct fields', () => {
       renderContributorFields();
 
