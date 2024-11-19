@@ -2,6 +2,7 @@
 
 ## [5.1.0] (IN PROGRESS)
 
+* Jest/RTL: Cover `ContributorFields` component with unit tests. Refs UIPCIR-76.
 * Jest/RTL: Cover CirculationNoteFields component with unit tests. Refs (UIPCIR-77)
 
 ## [5.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v5.0.0) (2024-10-30)
