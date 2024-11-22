@@ -14,11 +14,11 @@ import CreateRecordsWrapper from './CreateRecordsWrapper';
 
 const CreateRecordsPlugin = ({
   buttonStyle,
-  open,
+  open = false,
   onOpen,
   onClose,
   renderTrigger,
-  renderInPaneset,
+  renderInPaneset = true,
 }) => {
   const [isModalOpen, toggleModal] = useState(false);
 
@@ -70,11 +70,6 @@ const CreateRecordsPlugin = ({
       }
     </IfPermission>
   );
-};
-
-CreateRecordsPlugin.defaultProps = {
-  open: false,
-  renderInPaneset: true,
 };
 
 CreateRecordsPlugin.propTypes = {
