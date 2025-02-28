@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-create-inventory-records",
-  "version": "5.1.0",
+  "version": "6.0.0",
   "description": "Create inventory records for Stripes",
   "repository": "folio-org/ui-plugin-create-inventory-records",
   "publishConfig": {
@@ -115,21 +115,21 @@
     "test:unit": "jest --ci --coverage",
     "test": "yarn run test:unit",
     "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
-    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-plugin-create-inventory-records ./translations/ui-plugin-create-inventory-records/compiled"
+    "formatjs-compile": "stripes translate compile"
   },
   "devDependencies": {
-    "@folio/eslint-config-stripes": "^7.0.0",
-    "@folio/jest-config-stripes": "^2.0.0",
-    "@folio/stripes": "^9.2.0",
-    "@folio/stripes-cli": "^3.2.0",
-    "@folio/stripes-components": "^12.2.0",
-    "@folio/stripes-core": "^10.2.0",
-    "@folio/stripes-testing": "^4.8.0",
-    "@formatjs/cli": "^6.1.3",
+    "@folio/eslint-config-stripes": "^8.0.0",
+    "@folio/jest-config-stripes": "^3.0.0",
+    "@folio/stripes": "^10.0.0",
+    "@folio/stripes-cli": "^4.0.0",
+    "@folio/stripes-components": "^13.0.0",
+    "@folio/stripes-core": "^11.0.0",
+    "@folio/stripes-testing": "^5.0.0",
+    "@formatjs/cli": "^6.6.0",
     "core-js": "^3.6.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-intl": "^6.4.4",
+    "react-intl": "^7.1.5",
     "react-router-dom": "^5.2.0",
     "regenerator-runtime": "^0.13.3"
   },
@@ -144,10 +144,10 @@
     "react-final-form-listeners": "^1.0.2"
   },
   "peerDependencies": {
-    "@folio/stripes": "^9.2.0",
+    "@folio/stripes": "^10.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-intl": "^6.4.4",
+    "react-intl": "^7.1.5",
     "react-router-dom": "^5.2.0"
   }
 }
