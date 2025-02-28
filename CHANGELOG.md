@@ -2,6 +2,7 @@
 
 ## [6.0.0] (IN PROGRESS)
 
+* CI: Switch to centralized/shared workflow. Refs UIPCIR-93.
 * *BREAKING* Migrate stripes dependencies to their Sunflower versions. Refs UIPCIR-94.
 * *BREAKING* Migrate `react-intl` to v7. UIPCIR-95.
 
