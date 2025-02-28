@@ -1,5 +1,10 @@
 # Change history for ui-plugin-create-inventory-records
 
+## [6.0.0] (IN PROGRESS)
+
+* *BREAKING* Migrate stripes dependencies to their Sunflower versions. Refs UIPCIR-94.
+* *BREAKING* Migrate `react-intl` to v7. UIPCIR-95.
+
 ## [5.0.1](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v5.0.1) (2024-11-25)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v5.0.0...v5.0.1)
 
