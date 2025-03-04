@@ -53,6 +53,6 @@
     "circulationNotes.checkInNote": "Uwaga do zwrotu",
     "circulationNotes.checkOutNote": "Uwaga do wypożyczenia",
     "selectInstanceStatus": "Wybierz status instancji",
-    "permission.create": "Parametry rekordu skórconego: Utwórz",
+    "permission.create": "Parametry rekordu skróconego: Utwórz",
     "barcodeTaken": "Ten kod kreskowy został już użyty"
 }
