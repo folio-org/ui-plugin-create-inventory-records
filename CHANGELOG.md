@@ -1,6 +1,7 @@
 # Change history for ui-plugin-create-inventory-records
 
-## [6.0.0] (IN PROGRESS)
+## [6.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v6.0.0) (2025-03-13)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v5.0.1...v6.0.0)
 
 * CI: Switch to centralized/shared workflow. Refs UIPCIR-93.
 * *BREAKING* Migrate stripes dependencies to their Sunflower versions. Refs UIPCIR-94.
