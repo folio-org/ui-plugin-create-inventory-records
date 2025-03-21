@@ -1,10 +1,10 @@
 {
-    "meta.title": "创建典藏记录（插件）",
+    "meta.title": "创建典藏记录 : 插件 ) ",
     "fastAddLabel": "新建快速添加记录",
     "instanceRecord": "实例",
     "discoverySuppress": "在发现中隐藏",
     "instanceStatusTerm": "实例状态术语",
-    "instanceStatusTerm.uncataloged": "未编目（UC：uc）",
+    "instanceStatusTerm.uncataloged": "未编目 : UC : uc ) ",
     "resourceTitle": "资源题名",
     "publicationDate": "出版日期",
     "isbn": "ISBN",
@@ -53,6 +53,6 @@
     "circulationNotes.checkInNote": "归还附注",
     "circulationNotes.checkOutNote": "借出附注",
     "selectInstanceStatus": "选择实例状态",
-    "permission.create": "快速添加：创建",
+    "permission.create": "快速添加 : 创建",
     "barcodeTaken": "此条码已被采用"
 }
