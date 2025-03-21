@@ -48,6 +48,7 @@ const DataProvider = ({
     loadedData.settings = config;
     loadedData.identifierTypesByName = keyBy(loadedData.identifierTypes, 'name');
     loadedData.holdingsSourcesByName = keyBy(loadedData.holdingsSources, 'name');
+    loadedData.numberGeneratorSettings = loadedData.numberGeneratorSettings?.flatMap(obj => obj.items.map(item => item.value))[0] || [];
 
     return loadedData;
   }, [resources, manifest]);
@@ -103,6 +104,14 @@ DataProvider.manifest = Object.freeze({
       limit: '1000',
     },
     records: 'mtypes',
+  },
+  numberGeneratorSettings: {
+    type: 'okapi',
+    path: 'settings/entries',
+    params: {
+      query: 'scope==ui-inventory.number-generator-settings.manage and key==number-generator-settings',
+      limit: '1',
+    },
   },
   loanTypes: {
     type: 'okapi',

@@ -35,6 +35,7 @@
   "callNumberSuffix": "Call number suffix",
   "selectType": "Select type",
   "barcode": "Barcode",
+  "numberGenerator.generateBarcode": "Generate barcode",
   "selectMaterialType": "Select material type",
   "materialType": "Material type",
   "selectLoanType": "Select loan type",
