@@ -48,7 +48,9 @@ describe('ItemAccordion', () => {
     expect(screen.getByRole('group', { name: /electronic access/i })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /add electronic access/i })).toBeInTheDocument();
   });
+});
 
+describe('ItemAccordion - number generator for barcode', () => {
   it('should not render generate barcode button and enable barcode field when settings=off', () => {
     useData.mockReturnValue({
       numberGeneratorSettings: { [BARCODE_SETTING]: NUMBER_GENERATOR_OPTIONS_OFF }
