@@ -1,5 +1,8 @@
 # Change history for ui-plugin-create-inventory-records
 
+## (IN PROGRESS)
+* *BREAKING* Creating an item barcode using number generator in Fast Add. Refs UIPCIR-97.
+
 ## [6.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v6.0.0) (2025-03-13)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v5.0.1...v6.0.0)
 

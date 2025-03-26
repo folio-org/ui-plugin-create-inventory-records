@@ -9,4 +9,9 @@ export const circulationNoteTypes = [
   },
 ];
 
+export const BARCODE_SETTING = 'barcode';
+export const NUMBER_GENERATOR_OPTIONS_OFF = 'off';
+export const NUMBER_GENERATOR_OPTIONS_ON_EDITABLE = 'onEditable';
+export const NUMBER_GENERATOR_OPTIONS_ON_NOT_EDITABLE = 'onNotEditable';
+
 export default {};

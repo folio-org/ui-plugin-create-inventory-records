@@ -118,7 +118,7 @@ const CreateRecordsForm = ({
           <AccordionSet initialStatus={initialStatus}>
             <InstanceAccordion />
             <HoldingAccordion change={form.change} />
-            <ItemAccordion />
+            <ItemAccordion change={form.change} />
           </AccordionSet>
         </AccordionStatus>
       </Pane>

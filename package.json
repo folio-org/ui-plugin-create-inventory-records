@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-create-inventory-records",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Create inventory records for Stripes",
   "repository": "folio-org/ui-plugin-create-inventory-records",
   "publishConfig": {
@@ -44,7 +44,8 @@
       "holdings-note-types": "1.0",
       "users": "15.0 16.0",
       "location-units": "2.0",
-      "circulation": "9.0 10.0 11.0 12.0 13.0 14.0"
+      "circulation": "9.0 10.0 11.0 12.0 13.0 14.0",
+      "settings": "1.1"
     },
     "permissionSets": [
       {
@@ -104,7 +105,8 @@
           "inventory-storage.service-points.item.get",
           "inventory-storage.service-points.collection.get",
           "inventory-storage.hrid-settings.item.get",
-          "inventory-storage.record-bulk.ids.get"
+          "inventory-storage.record-bulk.ids.get",
+          "mod-settings.global.read.ui-inventory.number-generator-settings.manage"
         ],
         "visible": true
       }
@@ -120,10 +122,12 @@
   "devDependencies": {
     "@folio/eslint-config-stripes": "^8.0.0",
     "@folio/jest-config-stripes": "^3.0.0",
+    "@folio/service-interaction": "^4.0.0",
     "@folio/stripes": "^10.0.0",
     "@folio/stripes-cli": "^4.0.0",
     "@folio/stripes-components": "^13.0.0",
     "@folio/stripes-core": "^11.0.0",
+    "@folio/stripes-erm-components": "^10.0.0",
     "@folio/stripes-testing": "^5.0.0",
     "@formatjs/cli": "^6.6.0",
     "core-js": "^3.6.4",
@@ -144,7 +148,9 @@
     "react-final-form-listeners": "^1.0.2"
   },
   "peerDependencies": {
+    "@folio/service-interaction": "^4.0.0",
     "@folio/stripes": "^10.0.0",
+    "@folio/stripes-erm-components": "^10.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intl": "^7.1.5",
