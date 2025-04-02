@@ -54,5 +54,6 @@
     "circulationNotes.checkOutNote": "貸出ノート",
     "selectInstanceStatus": "インスタンス ステータスの選択",
     "permission.create": "Fast add: Create",
-    "barcodeTaken": "このバーコードはすでに使用されています"
+    "barcodeTaken": "このバーコードはすでに使用されています",
+    "numberGenerator.generateBarcode": "Generate barcode"
 }

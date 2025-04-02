@@ -54,5 +54,6 @@
     "circulationNotes.checkOutNote": "Nota de empréstimo",
     "selectInstanceStatus": "Selecione o status da instância",
     "permission.create": "Registro rápido: Criar",
-    "barcodeTaken": "Este código de barras já foi usado"
+    "barcodeTaken": "Este código de barras já foi usado",
+    "numberGenerator.generateBarcode": "Gerar código de barras"
 }

@@ -54,5 +54,6 @@
     "circulationNotes.checkOutNote": "대출 노트",
     "selectInstanceStatus": "인스턴스 상태 선택",
     "permission.create": "빠른 추가: 만들기",
-    "barcodeTaken": "This barcode has already been taken"
+    "barcodeTaken": "This barcode has already been taken",
+    "numberGenerator.generateBarcode": "Generate barcode"
 }

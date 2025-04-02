@@ -3,7 +3,7 @@
     "fastAddLabel": "Nový záznam rychlého přidání",
     "instanceRecord": "Titul",
     "discoverySuppress": "Vyřadit z vyhledávání",
-    "instanceStatusTerm": "Termín stavu titulu",
+    "instanceStatusTerm": "Stav titulu",
     "instanceStatusTerm.uncataloged": "Nekatalogizováno (UC: uc)",
     "resourceTitle": "Název zdroje",
     "publicationDate": "Datum publikace",
@@ -17,7 +17,7 @@
     "addContributor": "Přidat autora",
     "contributors": "Autoři",
     "contributors.name": "Název",
-    "contributors.nameType": "Typ jména",
+    "contributors.nameType": "Typ autority",
     "contributors.primary": "Hlavní",
     "contributors.makePrimary": "Nastavit jako hlavní",
     "contributors.selectType": "Vybrat typ",
@@ -54,5 +54,6 @@
     "circulationNotes.checkOutNote": "Poznámka Výpůjčky",
     "selectInstanceStatus": "Vyberte stav titulu",
     "permission.create": "Rychlé přidání: Vytvořit",
-    "barcodeTaken": "Tento čárový kód již byl použit"
+    "barcodeTaken": "Tento čárový kód již byl použit",
+    "numberGenerator.generateBarcode": "Vygenerovat čárový kód"
 }

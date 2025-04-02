@@ -54,5 +54,6 @@
     "circulationNotes.checkOutNote": "借出附注",
     "selectInstanceStatus": "选择实例状态",
     "permission.create": "快速添加 : 创建",
-    "barcodeTaken": "此条码已被采用"
+    "barcodeTaken": "此条码已被采用",
+    "numberGenerator.generateBarcode": "Generate barcode"
 }

@@ -54,5 +54,6 @@
     "circulationNotes.checkOutNote": "Nota de préstamo",
     "selectInstanceStatus": "Seleccionar el estado de la instancia.",
     "permission.create": "Adición rápida: crear.",
-    "barcodeTaken": "Este código de barras ya ha sido asignado."
+    "barcodeTaken": "Este código de barras ya ha sido asignado.",
+    "numberGenerator.generateBarcode": "Generate barcode"
 }
