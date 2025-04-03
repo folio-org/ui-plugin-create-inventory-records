@@ -54,5 +54,6 @@
     "circulationNotes.checkOutNote": "Note d'emprunt",
     "selectInstanceStatus": "Sélectionnez le statut de notice bibliographique",
     "permission.create": "Ajout rapide: créer",
-    "barcodeTaken": "Ce code-barres a déjà été pris"
+    "barcodeTaken": "Ce code-barres a déjà été pris",
+    "numberGenerator.generateBarcode": "Generate barcode"
 }

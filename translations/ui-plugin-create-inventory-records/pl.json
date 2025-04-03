@@ -54,5 +54,6 @@
     "circulationNotes.checkOutNote": "Uwaga do wypożyczenia",
     "selectInstanceStatus": "Wybierz status instancji",
     "permission.create": "Parametry rekordu skróconego: Utwórz",
-    "barcodeTaken": "Ten kod kreskowy został już użyty"
+    "barcodeTaken": "Ten kod kreskowy został już użyty",
+    "numberGenerator.generateBarcode": "Generate barcode"
 }

@@ -54,5 +54,6 @@
     "circulationNotes.checkOutNote": "Ausleihanmerkung",
     "selectInstanceStatus": "Instanzstatus auswählen",
     "permission.create": "Kurzaufnahme: Erstellen",
-    "barcodeTaken": "Dieser Barcode ist bereits vergeben"
+    "barcodeTaken": "Dieser Barcode ist bereits vergeben",
+    "numberGenerator.generateBarcode": "Barcode generieren"
 }
