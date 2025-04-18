@@ -53,7 +53,7 @@
     "circulationNotes.checkInNote": "ملاحظة الرد",
     "circulationNotes.checkOutNote": "ملاحظة الإعارة",
     "selectInstanceStatus": "اختر حالة الوعاء",
-    "permission.create": "الإضافة السريعة: أنشئ",
+    "permission.create": "الإضافة السريعة: إنشاء",
     "barcodeTaken": "تم استخدام هذا الباركود بالفعل",
     "numberGenerator.generateBarcode": "توليد باركود"
 }

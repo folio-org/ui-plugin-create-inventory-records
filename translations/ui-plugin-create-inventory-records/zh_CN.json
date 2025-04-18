@@ -55,5 +55,5 @@
     "selectInstanceStatus": "选择实例状态",
     "permission.create": "快速添加 : 创建",
     "barcodeTaken": "此条码已被采用",
-    "numberGenerator.generateBarcode": "Generate barcode"
+    "numberGenerator.generateBarcode": "生成条码"
 }

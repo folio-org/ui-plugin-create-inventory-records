@@ -55,5 +55,5 @@
     "selectInstanceStatus": "Wybierz status instancji",
     "permission.create": "Parametry rekordu skróconego: Utwórz",
     "barcodeTaken": "Ten kod kreskowy został już użyty",
-    "numberGenerator.generateBarcode": "Generate barcode"
+    "numberGenerator.generateBarcode": "Generuj kod kreskowy"
 }
