@@ -15,7 +15,7 @@
     "onSave.success": "تم إنشاء تسجيلات المخزون بنجاح",
     "onSave.error": "فشل حفظ تسجيلات المخزون",
     "addContributor": "إضافة مساهم",
-    "contributors": "المساهمون",
+    "contributors": "المساهمين",
     "contributors.name": "الاسم",
     "contributors.nameType": "نوع الاسم",
     "contributors.primary": "رئيسي",

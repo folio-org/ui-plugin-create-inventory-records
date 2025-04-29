@@ -55,5 +55,5 @@
     "selectInstanceStatus": "Instancestatus selecteren",
     "permission.create": "Snel toevoegen: Aanmaken",
     "barcodeTaken": "Deze barcode is al gebruikt",
-    "numberGenerator.generateBarcode": "Generate barcode"
+    "numberGenerator.generateBarcode": "Barcode genereren"
 }

@@ -16,7 +16,7 @@
     "onSave.error": "Uložení záznamů katalogu se nezdařilo",
     "addContributor": "Přidat autora",
     "contributors": "Autoři",
-    "contributors.name": "Název",
+    "contributors.name": "Jméno",
     "contributors.nameType": "Typ autority",
     "contributors.primary": "Hlavní",
     "contributors.makePrimary": "Nastavit jako hlavní",
