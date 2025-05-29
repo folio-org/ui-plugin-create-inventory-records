@@ -33,7 +33,7 @@
     "callNumberSuffix": "Call number suffix",
     "selectType": "Select type",
     "itemRecord": "Item",
-    "barcode": "Barcode",
+    "barcode": "Штрихкод",
     "selectMaterialType": "Select material type",
     "materialType": "Material type",
     "selectLoanType": "Select loan type",
@@ -54,6 +54,6 @@
     "circulationNotes.checkOutNote": "Check out note",
     "selectInstanceStatus": "Вибрати статус біб.запису (інстансу)",
     "permission.create": "Fast add: Create",
-    "barcodeTaken": "This barcode has already been taken",
+    "barcodeTaken": "Цей штрихкод уже використовується",
     "numberGenerator.generateBarcode": "Згенерувати штрихкод"
 }
