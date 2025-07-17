@@ -1,6 +1,6 @@
 {
     "meta.title": "Створити записи для додатку \"Облік фонду\" (плагін)",
-    "fastAddLabel": "New fast add record",
+    "fastAddLabel": "Новий запис швидкого додавання",
     "instanceRecord": "Біб.запис (інстанс)",
     "discoverySuppress": "Приховати у пошуковій системі",
     "instanceStatusTerm": "Термін статусу біб.запису (інстансу)",
