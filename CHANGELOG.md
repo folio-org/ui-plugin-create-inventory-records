@@ -2,6 +2,7 @@
 
 ## (IN PROGRESS)
 * *BREAKING* Creating an item barcode using number generator in Fast Add. Refs UIPCIR-97.
+* Support interface `item-storage` `11.0`. Refs UIPCIR-98.
 
 ## [6.0.0](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v6.0.0) (2025-03-13)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v5.0.1...v6.0.0)
