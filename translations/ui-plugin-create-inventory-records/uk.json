@@ -44,7 +44,7 @@
     "electronicAccess.uri": "URI",
     "electronicAccess.linkText": "Текст посилання",
     "electronicAccess.materialsSpecification": "Вказані матеріали",
-    "electronicAccess.publicNote": "Публічна примітка до URL-адреси",
+    "electronicAccess.publicNote": "Публічна примітка щодо URL-адреси",
     "circulationNotes": "Примітки примірника",
     "addCirculationNote": "Додати примітку про повернення/видачу",
     "circulationNotes.noteType": "Тип примітки",
