@@ -44,7 +44,7 @@
     "electronicAccess.uri": "URI",
     "electronicAccess.linkText": "Texto do link",
     "electronicAccess.materialsSpecification": "Materiais especificados",
-    "electronicAccess.publicNote": "URL de nota pública",
+    "electronicAccess.publicNote": "Nota pública da URL",
     "circulationNotes": "Notas do item",
     "addCirculationNote": "Adicionar nota de devolução / empréstimo",
     "circulationNotes.noteType": "Tipo de nota",
