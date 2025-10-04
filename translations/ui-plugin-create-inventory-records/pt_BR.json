@@ -1,9 +1,9 @@
 {
     "meta.title": "Criar registros de catalogação (plug-in)",
-    "fastAddLabel": "Novo registro de adição rápida",
+    "fastAddLabel": "Novo registro rápido",
     "instanceRecord": "Instância",
     "discoverySuppress": "Ocultar da descoberta",
-    "instanceStatusTerm": "Termo do status da instância",
+    "instanceStatusTerm": "Status da instância",
     "instanceStatusTerm.uncataloged": "Não catalogado (UC: uc)",
     "resourceTitle": "Título do recurso",
     "publicationDate": "Data de publicação",
