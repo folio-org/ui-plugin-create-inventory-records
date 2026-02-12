@@ -55,5 +55,5 @@
     "selectInstanceStatus": "Select instance status",
     "permission.create": "Fast add: Create",
     "barcodeTaken": "This barcode has already been taken",
-    "numberGenerator.generateBarcode": "Generate barcode"
+    "numberGenerator.generateBarcode": "สร้างบาร์โค้ด"
 }
