@@ -21,7 +21,7 @@
     "contributors.primary": "기본",
     "contributors.makePrimary": "기본으로 설정",
     "contributors.selectType": "유형 선택",
-    "selectToContinue": "계속하려면 선택하십시오.",
+    "selectToContinue": "항목을 선택해 주세요.",
     "fillIn": "계속하려면 이 정보를 입력하세요.",
     "holdingsRecord": "홀딩",
     "permanentLocation": "영구적인 위치",
@@ -54,6 +54,6 @@
     "circulationNotes.checkOutNote": "대출 노트",
     "selectInstanceStatus": "인스턴스 상태 선택",
     "permission.create": "빠른 추가: 만들기",
-    "barcodeTaken": "This barcode has already been taken",
+    "barcodeTaken": "이 바코드는 이미 등록되어 있습니다.",
     "numberGenerator.generateBarcode": "Generate barcode"
 }
