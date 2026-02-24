@@ -1,7 +1,7 @@
 {
     "meta.title": "Create inventory records (plugin)",
     "fastAddLabel": "New fast add record",
-    "instanceRecord": "Instance",
+    "instanceRecord": "ระเบียนบรรณานุกรม",
     "discoverySuppress": "Suppress from discovery",
     "instanceStatusTerm": "Instance status term",
     "instanceStatusTerm.uncataloged": "Uncataloged (UC: uc)",
@@ -32,7 +32,7 @@
     "callNumber": "Call number",
     "callNumberSuffix": "Call number suffix",
     "selectType": "Select type",
-    "itemRecord": "Item",
+    "itemRecord": "รายการทรัพยากร",
     "barcode": "Barcode",
     "selectMaterialType": "Select material type",
     "materialType": "Material type",
