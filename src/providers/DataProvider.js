@@ -36,7 +36,7 @@ const DataProvider = ({
     try {
       const { instanceStatusCode, defaultDiscoverySuppress } = JSON.parse(value);
       const discoverySuppress = JSON.parse(defaultDiscoverySuppress);
-      const statusId = (instanceStatuses.find(status => status.code === instanceStatusCode) || {}).id || '';
+      const statusId = (instanceStatuses.find(status => status.code === instanceStatusCode) || {}).id || null;
 
       config = {
         discoverySuppress,
