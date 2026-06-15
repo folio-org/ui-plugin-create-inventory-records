@@ -1,6 +1,7 @@
 # Change history for ui-plugin-create-inventory-records
 
-## 7.0.1 (IN PROGRESS)
+## [7.0.1](https://github.com/folio-org/ui-plugin-create-inventory-records/tree/v7.0.0) (2026-06-15)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-inventory-records/compare/v7.0.0...v7.0.1)
 
 * Set `statusId` as `null` by default in order not to fail Fast add record creation. Fixes UIPCIR-103.
 
