@@ -133,29 +133,29 @@
     "@folio/stripes-testing": "^5.0.0",
     "@formatjs/cli": "^6.6.0",
     "core-js": "^3.6.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-intl": "^7.1.5",
-    "react-router-dom": "^5.2.0",
-    "regenerator-runtime": "^0.13.3"
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-intl": "^10.1.17",
+    "react-router-dom": "^7.18.1",
+    "regenerator-runtime": "^0.14.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "final-form": "^4.18.2",
-    "final-form-arrays": "^3.0.1",
+    "final-form": "^5.0.1",
+    "final-form-arrays": "^4.0.1",
     "lodash": "^4.18.0",
     "prop-types": "^15.6.0",
-    "react-final-form": "^6.3.0",
-    "react-final-form-arrays": "^3.1.0",
-    "react-final-form-listeners": "^1.0.2"
+    "react-final-form": "^7.0.1",
+    "react-final-form-arrays": "^5.0.0",
+    "react-final-form-listeners": "^3.0.1"
   },
   "peerDependencies": {
     "@folio/service-interaction": "^4.0.0",
     "@folio/stripes": "^10.1.0",
     "@folio/stripes-erm-components": "^10.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-intl": "^7.1.5",
-    "react-router-dom": "^5.2.0"
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-intl": "^10.1.17",
+    "react-router-dom": "^7.18.1"
   }
 }
